@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>DAS Applicant Form</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body style="padding: 40px">
+    <main>
+      <h1 class="form-h1">Applicant Form</h1>
+      <div class="wrapper">
+        <div class="successMsg" id="successMsg">
+          <h4>Success</h4>
+          <p>One of our team will be in contact soon about your application</p>
+          <img src="" alt="" />
+          <p>
+            To contact us about your application, please give us a call on<a
+              href="tel:"
+              >020 000 0000</a
+            >
+          </p>
+        </div>
+        <div class="container-lead">
+          <!-- <form action="create-lead.php" id="newLead" class="form" method="POST"> -->
+          <form id="newLead" class="form">
+            <div class="form-field">
+              <label for="firstName">First Name</label>
+              <input
+                type="text"
+                name="firstName"
+                id="firstName"
+                id="firstName"
+              />
+              <small></small>
+            </div>
+            <div class="form-field">
+              <label for="lastName">Last Name</label>
+              <input type="text" name="lastName" id="lastName" id="lastName" />
+              <small></small>
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="text" name="email" id="email" />
+              <small></small>
+            </div>
+            <div class="form-field">
+              <label for="telephone">Telephone</label>
+              <input type="text" name="telephone" id="telephone" />
+              <small></small>
+            </div>
+            <div class="form-field dropdown">
+              <label for="buyerType" class="buyerType">Application Type</label>
+              <select class="secondary" name="buyerType" id="buyerType">
+                <option value="Purchase">Purchase</option>
+                <option value="FirstTimeBuyer">First Time Buyer</option>
+                <option value="Remortgage">Remortgage</option>
+                <option value="RaiseFunds">Raise Funds</option>
+              </select>
+            </div>
+            <div class="form-field" id="terms">
+              <label class="check-container" for="accept">
+                <input
+                  class="accept"
+                  type="checkbox"
+                  id="accept"
+                  name="accept"
+                  value="yes"
+                />
+                I agree to the <a href="#">terms and conditions</a>
+              </label>
+              <small></small>
+            </div>
+            <div class="form-field buttons">
+              <button
+                disabled
+                class="submitButton"
+                name="submitButton"
+                type="submit"
+                id="submitButton"
+              >
+                Submit
+              </button>
+              <input class="clear" type="reset" name="reset" id="reset" />
+            </div>
+          </form>
+        </div>
+      </div>
+      <script src="js/app.js"></script>
+    </main>
+  </body>
+</html>
