@@ -134,7 +134,7 @@ function hideBox() {
 
 let valid = ""
 
-document.querySelector("form").addEventListener("input", function() {
+document.querySelector("form").addEventListener("input", function () {
     let valid = false;
     if (checkFirstName(),
         checkLastName(),
@@ -155,7 +155,7 @@ document.querySelector("form").addEventListener("input", function() {
 const cb = document.querySelector("#accept");
 console.log("it is" + (cb.checked));
 
-cb.addEventListener('click', function() {
+cb.addEventListener('click', function () {
     if (cb.checked === true) {
         submitBtn.disabled = false;
     } else {
@@ -163,26 +163,49 @@ cb.addEventListener('click', function() {
     }
 });
 
-// post the data
+// const formObj = JSON.stringify(Object.fromEntries(formData));
+// console.log(formObj);
 
-form.addEventListener('submit', function(e) {
+
+function successMsg() {
+    document.getElementById("successMsg").style.display = "flex";
+    console.log("POSTED");
+};
+
+async function makePost() {
+
+    try {
+
+        const formData = new FormData(form);
+        console.log(formData);
+
+        const formObj = JSON.stringify(Object.fromEntries(formData));
+        console.log(formObj);
+
+        const response = await fetch('create-lead.php', {
+            method: 'post',
+            body: formData,
+            //Headers: myHeaders,
+            //mode: "no-cors",
+        });
+
+        console.log('status code: ', response.status);
+        if (!response.ok) {
+            console.log(response);
+            throw new Error(`Error! status; ${response.status}`);
+        }
+        const result = await response.json();
+        return result;
+    } catch (err) {
+        console.log(err);
+        console.log(response);
+    }
+};
+
+form.addEventListener('submit', function (e) {
 
     e.preventDefault();
-
-    const formData = new FormData(this);
-
-    fetch('create-lead.php', {
-
-        method: 'post',
-        body: formData
-
-    }).then(function(response) {
-        return response.text();
-    }).then(function(text) {
-        console.log(text);
-    }).catch(function(error) {
-        console.log(error);
-    });
+    makePost()
 
 });
 
@@ -204,7 +227,7 @@ function debounce(fn, delay = 500) {
 
 
 //event delegation
-form.addEventListener('input', debounce(function(e) {
+form.addEventListener('input', debounce(function (e) {
     switch (e.target.id) {
         case 'firstName':
             checkFirstName();
