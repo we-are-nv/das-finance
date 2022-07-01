@@ -12,19 +12,20 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100%;
-    background-color: #121e2b;
+    width: auto;
+    background-color: #454f53;
+    padding: none;
 }
 
 .container {
-    padding: 1em;
-    width: 100%;
+    padding: none;
     height: auto;
-    background-color: #121e2b;
+    background-color: #454f53;
     max-width: 700px;
 }
 
 form {
-    padding: 10 20px;
+    padding: none;
 }
 
 h1 {
