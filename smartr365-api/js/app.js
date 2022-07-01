@@ -201,6 +201,42 @@ async function makePost() {
     }
 };
 
+
+function successMsg() {
+    document.getElementById("successMsg").style.display = "flex";
+    console.log("POSTED");
+};
+
+async function makePost() {
+
+    try {
+
+        const formData = new FormData(form);
+        console.log(formData);
+
+        const formObj = JSON.stringify(Object.fromEntries(formData));
+        console.log(formObj);
+
+        const response = await fetch('create-lead.php', {
+            method: 'post',
+            body: formData,
+            //Headers: myHeaders,
+            //mode: "no-cors",
+        });
+
+        console.log('status code: ', response.status);
+        if (!response.ok) {
+            console.log(response);
+            throw new Error(`Error! status; ${response.status}`);
+        }
+        const result = await response.json();
+        return result;
+    } catch (err) {
+        console.log(err);
+        console.log(response);
+    }
+};
+
 form.addEventListener('submit', function(e) {
 
     e.preventDefault();
