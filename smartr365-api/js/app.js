@@ -164,25 +164,47 @@ cb.addEventListener('click', function() {
 });
 
 // post the data
+const wrapper = document.getElementById('wrapper');
+const formWrap = document.getElementById('formWrap');
+const successMsg = document.getElementById('successMsg');
+const applicantH1 = document.getElementById('applicantH1');
+successMsg.style.display = 'none';
+
+function successTime() {
+    successMsg.style.display = 'flex';
+    applicantH1.style.display = 'none';
+    successMsg.style.flexDirection = 'column';
+    formWrap.style.display = 'none';
+}
+
+
+
+async function makePost() {
+    const formData = new FormData(form);
+    try {
+        const response = await fetch('create-lead.php', {
+            method: 'post',
+            body: formData,
+
+        });
+        console.log('status code: ', response.status);
+        if (!response.ok) {
+            console.log(response);
+            throw new Error(`Error! status; ${response.status}`);
+        } else {
+            successTime();
+        }
+        const result = await response.json();
+        return result;
+    } catch (err) {
+        console.log(err);
+    }
+};
 
 form.addEventListener('submit', function(e) {
 
     e.preventDefault();
-
-    const formData = new FormData(this);
-
-    fetch('create-lead.php', {
-
-        method: 'post',
-        body: formData
-
-    }).then(function(response) {
-        return response.text();
-    }).then(function(text) {
-        console.log(text);
-    }).catch(function(error) {
-        console.log(error);
-    });
+    makePost();
 
 });
 

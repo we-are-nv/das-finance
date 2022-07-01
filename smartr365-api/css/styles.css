@@ -3,6 +3,7 @@
     --success-color: #28a745;
     --warning-color: #ffc107;
 }
+
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
@@ -19,6 +20,7 @@ body {
     width: 100%;
     height: auto;
     background-color: #121e2b;
+    max-width: 700px;
 }
 
 form {
@@ -130,7 +132,6 @@ h1 {
     position: relative;
     padding: 10px;
     cursor: pointer;
-
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
@@ -139,6 +140,7 @@ h1 {
 .form-field #accept {
     height: auto;
 }
+
 a {
     text-decoration: none;
     color: #fff;
@@ -148,11 +150,30 @@ a {
     display: flex;
 }
 
+.successH1 {
+    text-align: center;
+}
+
 .successMsg {
     display: flex;
+    position: relative;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     font-weight: 600;
-    visibility: hidden;
-    
+    border: 3px solid #00b8ac;
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 300px;
+    color: #00b8ac;
+    font-size: 16px;
+}
+
+.contact-number {
+    font-size: 20;
+}
+
+.numberLink {
+    text-align: center;
 }
