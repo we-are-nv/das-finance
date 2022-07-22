@@ -134,7 +134,7 @@ function hideBox() {
 
 let valid = ""
 
-document.querySelector("form").addEventListener("input", function() {
+document.querySelector("form").addEventListener("input", function () {
     let valid = false;
     if (checkFirstName(),
         checkLastName(),
@@ -155,7 +155,7 @@ document.querySelector("form").addEventListener("input", function() {
 const cb = document.querySelector("#accept");
 console.log("it is" + (cb.checked));
 
-cb.addEventListener('click', function() {
+cb.addEventListener('click', function () {
     if (cb.checked === true) {
         submitBtn.disabled = false;
     } else {
@@ -177,7 +177,7 @@ function successTime() {
     formWrap.style.display = 'none';
 }
 
-
+//makepost function
 async function makePost() {
     const formData = new FormData(form);
     try {
@@ -200,7 +200,7 @@ async function makePost() {
     }
 };
 
-form.addEventListener('submit', function(e) {
+form.addEventListener('submit', function (e) {
 
     e.preventDefault();
     makePost();
@@ -225,7 +225,7 @@ function debounce(fn, delay = 500) {
 
 
 //event delegation
-form.addEventListener('input', debounce(function(e) {
+form.addEventListener('input', debounce(function (e) {
     switch (e.target.id) {
         case 'firstName':
             checkFirstName();
