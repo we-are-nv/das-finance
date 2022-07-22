@@ -704,9 +704,21 @@
               team will be in touch within 24 hours.
             </p>
           </div>
-          <div class="form-wrapper">
-            <div class="form-embed w-embed w-iframe">
-              <h1 class="form-h1" id="applicantH1">Applicant Form</h1>
+          <h1 class="form-h1" id="applicantH1">Applicant Form</h1>
+    <div class="wrapper">
+      <div class="successMsg" id="successMsg">
+        <h2>Success</h2>
+        <p>One of our team will be in contact soon about your application</p>
+        <img src="" alt="" />
+        <p>
+          To contact us about your application, please give us a call on
+        </p>
+        <p>
+          <a href="tel:">
+            <span class="contact-number">0333 344 9422</a>
+        </p>
+      </div>
+      <h1 class="form-h1" id="applicantH1">Applicant Form</h1>
     <div class="wrapper">
       <div class="successMsg" id="successMsg">
         <h2>Success</h2>
@@ -721,7 +733,7 @@
         </p>
       </div>
       <div class="container-lead" id="formWrap">
-        <!-- <form action="create-lead.php" id="newLead" class="form" method="POST"> -->
+        <form action="/smartr365-api/create-lead.php" id="newLead" class="form" method="POST">
         <form id="newLead" class="form">
           <div class="form-field">
             <label for="firstName">First Name</label>
@@ -768,10 +780,8 @@
         </form>
       </div>
     </div>
-    <script src="/smartr365/js/"></script>
+    <script src="/smartr365-api/js/app.js"></script>
   
-            </div>
-          </div>
         </div>
       </div>
       <div class="section">
