@@ -190,7 +190,7 @@ async function makePost() {
         const response = await fetch('https://api.smartr365.com/api/v1/mortgage/lead/create', {
             method: 'POST',
             body: formData,
-            credentials: 'include',
+            //credentials: 'include',
             headers: {
                 'Content-Type': 'application/json',
                 'x-api-key': '2528e9b2-7250-48fc-9371-4c13cd5991a4',
