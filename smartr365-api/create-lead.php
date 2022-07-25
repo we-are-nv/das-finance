@@ -21,7 +21,7 @@ $ch = curl_init();
 $headers = [
   "x-api-key: 2528e9b2-7250-48fc-9371-4c13cd5991a4",
   "accept: application/json",
-  "content-Type: application/json",
+  "content-Type: text/plain",
 ];
 
 curl_setopt($ch, CURLOPT_URL, 'https://api.smartr365.com/api/v1/mortgage/lead/create');
