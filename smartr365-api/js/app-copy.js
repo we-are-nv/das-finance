@@ -193,9 +193,9 @@ async function makePost() {
             mode: 'cors',
             credentials: 'include',
             headers: {
-                'Content-Type': 'application/json',
+                'content-type': 'application/json',
                 'x-api-key': '2528e9b2-7250-48fc-9371-4c13cd5991a4',
-                'Accept': 'text/plain',
+                'accept': 'text/plain',
             },
 
         });
