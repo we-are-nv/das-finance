@@ -184,6 +184,7 @@ function successTime() {
 const corsHeaders = {
     'Access-Control-Allow-Headers': '*',
     'Access-Control-Allow-Methods': 'POST',
+    'Access-Control-Allow-Methods': 'OPTIONS',
     'Access-Control-Allow-Origin': '*'
 }
 
@@ -207,6 +208,7 @@ async function makePost() {
                     'accept': 'text/plain',
                     'Access-Control-Allow-Headers': '*',
                     'Access-Control-Allow-Methods': 'POST',
+                    'Access-Control-Allow-Methods': 'OPTIONS',
                     'Access-Control-Allow-Origin': '*'
                 },
 
