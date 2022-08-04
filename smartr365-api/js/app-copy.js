@@ -189,10 +189,10 @@ const corsHeaders = {
 
 //makepost function
 async function makePost() {
-    if (Request.method === "OPTIONS") {
-        return new Response("OK", { headers: corsHeaders })
+    if (request.method === "OPTIONS") {
+        return new response("OK", { headers: corsHeaders })
     }
-    if (Request.method === "POST") {
+    if (request.method === "POST") {
         const formData = new FormData(form);
         try {
 
