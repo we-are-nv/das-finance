@@ -173,6 +173,36 @@ function successTime() {
 }
 
 //new post function
+/*
+
+const submit = document.getElementById("submit");
+
+const getFormData = () => {
+	const form = document.getElementById("form");
+	return new FormData(form);
+};
+
+const toJson = function (event) {
+	const formData = getFormData();
+	event.preventDefault();
+	let object = {};
+	formData.forEach((value, key) => {
+		if (!Reflect.has(object, key)) {
+			object[key] = value;
+			return;
+		}
+		if (!Array.isArray(object[key])) {
+			object[key] = [object[key]];
+		}
+		object[key].push(value);
+	});
+	let json = JSON.stringify(object);
+	console.log(json);
+};
+
+submit.addEventListener("click", toJson);
+
+*/
 
 const corsHeaders = {
 	"Access-Control-Allow-Headers": "*",
@@ -181,59 +211,12 @@ const corsHeaders = {
 	"Access-Control-Allow-Origin": "*",
 };
 
-
-
-// // makepost function
-// async function makePost() {
-//     const entries = 
-// 	// if (Request.method === "OPTIONS") {
-// 	// 	return new Response("OK", { headers: corsHeaders });
-// 	// }
-// 	// if (Request.method === "POST") {
-// 	// const formData = new FormData(form);
-// 	// const jsonFormData = JSON.stringify(form);
-// 	//console.log(jsonFormData);
-// 	console.log(formData);
-// 	try {
-// 		const Response = await fetch(
-// 			"https://api.smartr365.com/api/v1/mortgage/lead/create",
-// 			{
-// 				method: "POST",
-// 				body: formData,
-// 				mode: "cors",
-// 				//credentials: 'include',
-// 				headers: {
-// 					"content-type": "application/json",
-// 					"x-api-key": "2528e9b2-7250-48fc-9371-4c13cd5991a4",
-// 					"accept": "text/plain",
-// 					// "Access-Control-Allow-Headers": "*",
-// 					// "Access-Control-Allow-Methods": "POST",
-// 					// "Access-Control-Allow-Methods": "OPTIONS",
-// 					// "Access-Control-Allow-Origin": "*",
-// 				},
-// 			}
-// 		);
-// 		console.log("status code: ", Response.status);
-// 		if (!Response.ok) {
-// 			console.log(Response);
-// 			throw new Error(`Error! status; ${Response.status}`);
-// 		} else {
-// 			successTime();
-// 		}
-// 		const result = await Response.json();
-// 		return result;
-// 	} catch (err) {
-// 		console.log(err);
-// 	}
-// }
-
-form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    var object = {};
-    formData.forEach((value, key) => object[key] = value);
-    var json = JSON.stringify(object);
-    
-    // if (Request.method === "OPTIONS") {
+// makepost function
+async function makePost() {
+	var object = {};
+	formData.forEach((value, key) => (object[key] = value));
+	var json = JSON.stringify(object);
+	// if (Request.method === "OPTIONS") {
 	// 	return new Response("OK", { headers: corsHeaders });
 	// }
 	// if (Request.method === "POST") {
@@ -272,7 +255,10 @@ form.addEventListener("submit", function (e) {
 	} catch (err) {
 		console.log(err);
 	}
+}
 
+form.addEventListener("submit", function (e) {
+	e.preventDefault();
 });
 
 // real time validation
