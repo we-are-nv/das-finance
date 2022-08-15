@@ -8,159 +8,154 @@ const telephoneEl = document.querySelector('#telephone');
 const form = document.querySelector('#newLead');
 
 const checkFirstName = () => {
-    let valid = false;
+	let valid = false;
 
-    const firstName = firstNameEl.value.trim();
+	const firstName = firstNameEl.value.trim();
 
-    if (!isRequired(firstName)) {
-        showError(firstNameEl, 'First name cannot be left blank');
-    } else if (!isFirstNameValid(firstName)) {
-        showError(firstNameEl, 'First name must only contain letters');
-    } else {
-        showSuccess(firstNameEl);
-        valid = true;
-    };
-    return valid;
+	if (!isRequired(firstName)) {
+		showError(firstNameEl, 'First name cannot be left blank');
+	} else if (!isFirstNameValid(firstName)) {
+		showError(firstNameEl, 'First name must only contain letters');
+	} else {
+		showSuccess(firstNameEl);
+		valid = true;
+	}
+	return valid;
 };
 
 const checkLastName = () => {
-    let valid = false;
+	let valid = false;
 
-    const lastName = lastNameEl.value.trim();
+	const lastName = lastNameEl.value.trim();
 
-    if (!isRequired(lastName)) {
-        showError(lastNameEl, 'Last name cannot be left blank');
-    } else if (!isLastNameValid(lastName)) {
-
-        showError(lastNameEl, 'Last name must only contain letters');
-
-    } else {
-        showSuccess(lastNameEl);
-        valid = true;
-    }
-    return valid;
+	if (!isRequired(lastName)) {
+		showError(lastNameEl, 'Last name cannot be left blank');
+	} else if (!isLastNameValid(lastName)) {
+		showError(lastNameEl, 'Last name must only contain letters');
+	} else {
+		showSuccess(lastNameEl);
+		valid = true;
+	}
+	return valid;
 };
 
 const checkEmail = () => {
-    let valid = false;
-    const email = emailEl.value.trim();
-    if (!isRequired(email)) {
-        showError(emailEl, 'Email field cannot be left blank');
-    } else if (!isEmailValid(email)) {
-        showError(emailEl, 'Email is not valid')
-    } else {
-        showSuccess(emailEl);
-        valid = true;
-    }
-    return valid;
+	let valid = false;
+	const email = emailEl.value.trim();
+	if (!isRequired(email)) {
+		showError(emailEl, 'Email field cannot be left blank');
+	} else if (!isEmailValid(email)) {
+		showError(emailEl, 'Email is not valid');
+	} else {
+		showSuccess(emailEl);
+		valid = true;
+	}
+	return valid;
 };
 const checkTelephone = () => {
-    let valid = false;
-    const telephone = telephoneEl.value.trim();
-    if (!isRequired(telephone)) {
-        showError(telephoneEl, 'Telephone field cannot be left blank');
-    } else if (!isTelephoneValid(telephone)) {
-        showError(telephoneEl, 'Number is not valid')
-    } else {
-        showSuccess(telephoneEl);
-        valid = true;
-    }
-    return valid;
+	let valid = false;
+	const telephone = telephoneEl.value.trim();
+	if (!isRequired(telephone)) {
+		showError(telephoneEl, 'Telephone field cannot be left blank');
+	} else if (!isTelephoneValid(telephone)) {
+		showError(telephoneEl, 'Number is not valid');
+	} else {
+		showSuccess(telephoneEl);
+		valid = true;
+	}
+	return valid;
 };
 
-
 const isFirstNameValid = (firstName) => {
-    const re = /^[a-zA-Z]+$/;
-    return re.test(firstName);
+	const re = /^[a-zA-Z]+$/;
+	return re.test(firstName);
 };
 
 const isLastNameValid = (lastName) => {
-    const re = /^[a-zA-Z]+$/;
-    return re.test(lastName);
+	const re = /^[a-zA-Z]+$/;
+	return re.test(lastName);
 };
 
-
 const isEmailValid = (email) => {
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email);
+	const re =
+		/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	return re.test(email);
 };
 
 const isTelephoneValid = (telephone) => {
-    const re = /^[0-9]+$/;
-    return re.test(telephone);
+	const re = /^[0-9]+$/;
+	return re.test(telephone);
 };
 
-const isRequired = value => value === '' ? false : true;
-
+const isRequired = (value) => (value === '' ? false : true);
 
 const showError = (input, message) => {
-    const formField = input.parentElement;
-    formField.classList.remove('success');
-    formField.classList.add('error');
+	const formField = input.parentElement;
+	formField.classList.remove('success');
+	formField.classList.add('error');
 
-    const error = formField.querySelector('small');
-    error.textContent = message;
+	const error = formField.querySelector('small');
+	error.textContent = message;
 };
 
 const showSuccess = (input) => {
-    const formField = input.parentElement;
+	const formField = input.parentElement;
 
-    formField.classList.remove('error');
-    formField.classList.add('success');
+	formField.classList.remove('error');
+	formField.classList.add('success');
 
-    const error = formField.querySelector('small');
-    error.textContent = '';
-}
+	const error = formField.querySelector('small');
+	error.textContent = '';
+};
 
 //final validation for the form
-const submitBtn = document.getElementById("submitButton");
-let hiddenBox = document.getElementById("terms").style.visibility = "hidden";
-let evalResult = "";
+const submitBtn = document.getElementById('submitButton');
+let hiddenBox = (document.getElementById('terms').style.visibility = 'hidden');
+let evalResult = '';
 
 //show or hide the terms and conditions check box
 
 function showBox() {
-    document.getElementById("terms").style.visibility = "visible";
-    console.log("a wild box appeared!");
-};
+	document.getElementById('terms').style.visibility = 'visible';
+	console.log('a wild box appeared!');
+}
 
 function hideBox() {
-    document.getElementById("terms").style.visibility = "hidden";
-    console.log("the box fled!");
-};
+	document.getElementById('terms').style.visibility = 'hidden';
+	console.log('the box fled!');
+}
 
 // validation runs on every input and only shows the checkbox
 // when the form is completely vaslidated
 
-let valid = ""
+let valid = '';
 
-document.querySelector("form").addEventListener("input", function() {
-    let valid = false;
-    if (checkFirstName(),
-        checkLastName(),
-        checkEmail(),
-        checkTelephone() === true) {
-        valid = true;
-    } else {
-        valid = false;
-    };
-    console.log(valid);
-    if (valid === true) {
-        showBox();
-    } else {
-        hideBox();
-    };
+document.querySelector('form').addEventListener('input', function () {
+	let valid = false;
+	if (
+		(checkFirstName(), checkLastName(), checkEmail(), checkTelephone() === true)
+	) {
+		valid = true;
+	} else {
+		valid = false;
+	}
+	console.log(valid);
+	if (valid === true) {
+		showBox();
+	} else {
+		hideBox();
+	}
 });
 
-const cb = document.querySelector("#accept");
-console.log("it is" + (cb.checked));
+const cb = document.querySelector('#accept');
+console.log('it is' + cb.checked);
 
-cb.addEventListener('click', function() {
-    if (cb.checked === true) {
-        submitBtn.disabled = false;
-    } else {
-        submitBtn.disabled = true;
-    }
+cb.addEventListener('click', function () {
+	if (cb.checked === true) {
+		submitBtn.disabled = false;
+	} else {
+		submitBtn.disabled = true;
+	}
 });
 
 // post the data
@@ -171,102 +166,98 @@ const applicantH1 = document.getElementById('applicantH1');
 successMsg.style.display = 'none';
 
 function successTime() {
-    successMsg.style.display = 'flex';
-    applicantH1.style.display = 'none';
-    successMsg.style.flexDirection = 'column';
-    formWrap.style.display = 'none';
+	successMsg.style.display = 'flex';
+	applicantH1.style.display = 'none';
+	successMsg.style.flexDirection = 'column';
+	formWrap.style.display = 'none';
 }
-
 
 //new post function
 
-
 const corsHeaders = {
-    'Access-Control-Allow-Headers': '*',
-    'Access-Control-Allow-Methods': 'POST',
-    'Access-Control-Allow-Methods': 'OPTIONS',
-    'Access-Control-Allow-Origin': '*'
-}
+	'Access-Control-Allow-Headers': '*',
+	'Access-Control-Allow-Methods': 'POST',
+	'Access-Control-Allow-Methods': 'OPTIONS',
+	'Access-Control-Allow-Origin': '*',
+};
 
 //makepost function
 async function makePost() {
-    if (request.method === "OPTIONS") {
-        return new response("OK", { headers: corsHeaders })
-    }
-    if (request.method === "POST") {
-        const formData = new FormData(form);
-        try {
+	if (request.method === 'OPTIONS') {
+		return new response('OK', { headers: corsHeaders });
+	}
+	if (request.method === 'POST') {
+		const formData = new FormData(form);
+		try {
+			const response = await fetch(
+				'https://api.smartr365.com/api/v1/mortgage/lead/create',
+				{
+					method: 'POST',
+					body: formData,
+					mode: 'cors',
+					//credentials: 'include',
+					headers: {
+						'content-type': 'application/json',
+						'x-api-key': '2528e9b2-7250-48fc-9371-4c13cd5991a4',
+						accept: 'text/plain',
+						'Access-Control-Allow-Headers': '*',
+						'Access-Control-Allow-Methods': 'POST',
+						'Access-Control-Allow-Methods': 'OPTIONS',
+						'Access-Control-Allow-Origin': '*',
+					},
+				}
+			);
+			console.log('status code: ', response.status);
+			if (!response.ok) {
+				console.log(response);
+				throw new Error(`Error! status; ${response.status}`);
+			} else {
+				successTime();
+			}
+			const result = await response.json();
+			return result;
+		} catch (err) {
+			console.log(err);
+		}
+	}
+}
 
-            const response = await fetch('https://api.smartr365.com/api/v1/mortgage/lead/create', {
-                method: 'POST',
-                body: formData,
-                mode: 'cors',
-                //credentials: 'include',
-                headers: {
-                    'content-type': 'application/json',
-                    'x-api-key': '2528e9b2-7250-48fc-9371-4c13cd5991a4',
-                    'accept': 'text/plain',
-                    'Access-Control-Allow-Headers': '*',
-                    'Access-Control-Allow-Methods': 'POST',
-                    'Access-Control-Allow-Methods': 'OPTIONS',
-                    'Access-Control-Allow-Origin': '*'
-                },
-
-            });
-            console.log('status code: ', response.status);
-            if (!response.ok) {
-                console.log(response);
-                throw new Error(`Error! status; ${response.status}`);
-            } else {
-                successTime();
-            }
-            const result = await response.json();
-            return result;
-        } catch (err) {
-            console.log(err);
-        }
-    }
-
-};
-
-form.addEventListener('submit', function(e) {
-
-    e.preventDefault();
-    makePost();
-
+form.addEventListener('submit', function (e) {
+	e.preventDefault();
+	makePost();
 });
-
 
 // real time validation
 function debounce(fn, delay = 500) {
+	let timeoutId;
 
-    let timeoutId;
-
-    return (...args) => {
-        if (timeoutId) {
-            clearTimeout(timeoutId);
-        }
-        timeoutId = setTimeout(() => {
-            fn.apply(null, args);
-        }, delay);
-    };
+	return (...args) => {
+		if (timeoutId) {
+			clearTimeout(timeoutId);
+		}
+		timeoutId = setTimeout(() => {
+			fn.apply(null, args);
+		}, delay);
+	};
 }
 
-
 //event delegation
-form.addEventListener('input', debounce(function(e) {
-    switch (e.target.id) {
-        case 'firstName':
-            checkFirstName();
-            break;
-        case 'lastName':
-            checkLastName();
-            break;
-        case 'email':
-            checkEmail();
-            break;
-        case 'telephone':
-            checkTelephone();
-            break;
-    }
-}));
+form.addEventListener(
+	'input',
+	debounce(function (e) {
+		switch (e.target.id) {
+			case 'firstName':
+				checkFirstName();
+				break;
+			case 'lastName':
+				checkLastName();
+				break;
+			case 'email':
+				checkEmail();
+				break;
+			case 'telephone':
+				checkTelephone();
+				break;
+		}
+	})
+);
