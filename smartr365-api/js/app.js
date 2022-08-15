@@ -176,13 +176,10 @@ function successTime() {
 async function makePost() {
 	const formData = new FormData(form);
 	try {
-		const response = await fetch(
-			'/html/das-finance/smartr365-api/create-lead.php',
-			{
-				method: 'post',
-				body: formData,
-			}
-		);
+		const response = await fetch('../create-lead.php', {
+			method: 'post',
+			body: formData,
+		});
 		console.log('status code: ', response.status);
 		if (!response.ok) {
 			console.log(response);
