@@ -177,7 +177,7 @@ async function makePost() {
 	const formData = new FormData(form);
 	try {
 		const response = await fetch('smartr365-api/create-lead.php', {
-			method: 'post',g
+			method: 'post',
 			body: formData,
 		});
 		g;
