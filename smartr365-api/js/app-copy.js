@@ -263,14 +263,15 @@ async function makePost() {
 
 form.addEventListener("submit", async function (e) {
 	e.preventDefault();
-	const newInput = document.querySelectorAll("#newLead input");
+	const newInput = document.querySelectorAll(
+		"#firstName, #lastName, #telephone, #email, #buyerType  input"
+	);
 	console.log(newInput);
 	const formArray = Array.from(newInput).reduce(
 		(acc, input) => ({ ...acc, [input.id]: [input.value] }),
 		{}
 	);
-	const toBeSent = formArray.slice(0, 4);
-	console.log(toBeSent);
+	//var toRemove = ['reset', 'accept']
 
 	console.log(formArray);
 	try {
