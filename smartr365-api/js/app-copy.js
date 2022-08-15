@@ -266,18 +266,18 @@ form.addEventListener("submit", async function (e) {
 	const newInput = document.querySelectorAll(
 		"#firstName, #lastName, #telephone, #email, #buyerType, input"
 	);
-	console.log(newInput);
+	console.log("new input is " + newInput);
 	const formArray = Array.from(newInput).reduce(
 		(acc, input) => ({ ...acc, [input.id]: [input.value] }),
 		{}
 	);
-	console.log(formArray);
+	console.log("formArray is " + formArray);
 	//turn this to JSON
 	const jsonData = JSON.stringify(formArray);
-	console.log(jsonData);
+	console.log("jsonData is " + jsonData);
 	let applicantArray = [];
 	applicantArray.push(formArray);
-	console.log(applicantArray);
+	console.log("applicant Array is " + applicantArray);
 
 	try {
 		const Response = await fetch(
