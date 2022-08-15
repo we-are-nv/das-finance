@@ -264,7 +264,7 @@ async function makePost() {
 form.addEventListener("submit", async function (e) {
 	e.preventDefault();
 	const newInput = document.querySelectorAll(
-		"#firstName, #lastName, #telephone, #email, #buyerType, input"
+		"#firstName, #lastName, #telephone, #email, input"
 	);
 	console.log("new input is " + newInput);
 	const formArray = Array.from(newInput).reduce(
