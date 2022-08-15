@@ -211,11 +211,6 @@ const corsHeaders = {
 	"Access-Control-Allow-Origin": "*",
 };
 
-const getFormData = () => {
-	const form = document.getElementById("newLead");
-	return new FormData(form);
-};
-
 // makepost function
 async function makePost() {
 	var object = {};
