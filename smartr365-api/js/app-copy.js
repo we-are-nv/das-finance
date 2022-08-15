@@ -255,6 +255,7 @@ async function makePost() {
 
 form.addEventListener("submit", function (e) {
 	e.preventDefault();
+	makePost();
 });
 
 // real time validation
