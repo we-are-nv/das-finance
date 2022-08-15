@@ -180,8 +180,8 @@ const corsHeaders = {
 	"Access-Control-Allow-Methods": "OPTIONS",
 	"Access-Control-Allow-Origin": "*",
 };
-const jsonFormData = JSON.stringify(form);
-console.log(jsonFormData);
+// const jsonFormData = JSON.stringify(form);
+// console.log(jsonFormData);
 //makepost function
 async function makePost() {
 	// if (Request.method === "OPTIONS") {
@@ -189,13 +189,15 @@ async function makePost() {
 	// }
 	// if (Request.method === "POST") {
 	// const formData = new FormData(form);
+	const jsonFormData = JSON.stringify(form);
+	console.log(jsonFormData);
 	try {
 		const Response = await fetch(
 			"https://api.smartr365.com/api/v1/mortgage/lead/create",
 			{
 				method: "POST",
 				body: jsonFormData,
-				// mode: "cors",
+				mode: "cors",
 				//credentials: 'include',
 				headers: {
 					"content-type": "application/json",
