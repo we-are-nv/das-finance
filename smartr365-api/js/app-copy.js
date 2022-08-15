@@ -216,11 +216,12 @@ const corsHeaders = {
 	"Access-Control-Allow-Methods": "OPTIONS",
 	"Access-Control-Allow-Origin": "*",
 };
-
+const newInput = document.querySelectorAll("#newLead input");
+console.log(newInput);
 //const form = document.querySelector("#newLead");
 // makepost function
 async function makePost() {
-	const formData = new FormData(this);
+	const formData = new FormData(form);
 	//const jsonFormData = JSON.stringify(formData);
 	//console.log(jsonFormData);
 	//console.log(form);
