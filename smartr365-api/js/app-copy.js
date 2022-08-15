@@ -271,7 +271,9 @@ form.addEventListener("submit", async function (e) {
 		(acc, input) => ({ ...acc, [input.id]: [input.value] }),
 		{}
 	);
-	//var toRemove = ['reset', 'accept']
+	//turn this to JSON
+	const jsonData = JSON.stringify(formArray);
+	console.log(jsonData);
 
 	console.log(formArray);
 	try {
@@ -279,7 +281,7 @@ form.addEventListener("submit", async function (e) {
 			"https://api.smartr365.com/api/v1/mortgage/lead/create",
 			{
 				method: "POST",
-				body: formArray,
+				body: jsonData,
 				mode: "cors",
 				//credentials: 'include',
 				headers: {
