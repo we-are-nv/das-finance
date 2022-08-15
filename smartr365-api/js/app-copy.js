@@ -184,12 +184,12 @@ const corsHeaders = {
 //makepost function
 async function makePost() {
 	if (Request.method === 'OPTIONS') {
-		return new response('OK', { headers: corsHeaders });
+		return new Response('OK', { headers: corsHeaders });
 	}
 	if (Request.method === 'POST') {
 		const formData = new FormData(form);
 		try {
-			const response = await fetch(
+			const Response = await fetch(
 				'https://api.smartr365.com/api/v1/mortgage/lead/create',
 				{
 					method: 'POST',
@@ -207,14 +207,14 @@ async function makePost() {
 					},
 				}
 			);
-			console.log('status code: ', response.status);
-			if (!response.ok) {
-				console.log(response);
-				throw new Error(`Error! status; ${response.status}`);
+			console.log('status code: ', Response.status);
+			if (!Response.ok) {
+				console.log(Response);
+				throw new Error(`Error! status; ${Response.status}`);
 			} else {
 				successTime();
 			}
-			const result = await response.json();
+			const result = await Response.json();
 			return result;
 		} catch (err) {
 			console.log(err);
