@@ -221,17 +221,17 @@ console.log(newInput);
 //const form = document.querySelector("#newLead");
 // makepost function
 async function makePost() {
-	const formData = new FormData(form);
+	//const formData = new FormData(form);
 	//const jsonFormData = JSON.stringify(formData);
 	//console.log(jsonFormData);
 	//console.log(form);
-	console.log(formData);
+	//console.log(formData);
 	try {
 		const Response = await fetch(
 			"https://api.smartr365.com/api/v1/mortgage/lead/create",
 			{
 				method: "POST",
-				body: formData,
+				body: ,
 				mode: "cors",
 				//credentials: 'include',
 				headers: {
@@ -263,6 +263,11 @@ form.addEventListener("submit", function (e) {
 	e.preventDefault();
 	const newInput = document.querySelectorAll("#newLead input");
 	console.log(newInput);
+	const formArray = Array.from(newInput).reduce(
+		(acc, input) => ({ ...acc, [input.id]: [input.value] }),
+		{}
+	);
+	console.log(formArray);
 	makePost();
 });
 
