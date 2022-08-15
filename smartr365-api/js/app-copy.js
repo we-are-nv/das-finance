@@ -5,7 +5,7 @@ const telephoneEl = document.querySelector("#telephone");
 // const checkBox = document.getElementById("accept");
 // const submitBtn = document.getElementById("submitButton");
 
-// const form = document.querySelector("#newLead");
+const form = document.querySelector("#newLead");
 
 const checkFirstName = () => {
 	let valid = false;
@@ -216,12 +216,13 @@ const corsHeaders = {
 	"Access-Control-Allow-Methods": "OPTIONS",
 	"Access-Control-Allow-Origin": "*",
 };
-const form = document.querySelector("#newLead");
+//const form = document.querySelector("#newLead");
 // makepost function
 async function makePost() {
 	const formData = new FormData(form);
 	//const jsonFormData = JSON.stringify(formData);
 	//console.log(jsonFormData);
+	console.log(form);
 	console.log(formData);
 	try {
 		const Response = await fetch(
