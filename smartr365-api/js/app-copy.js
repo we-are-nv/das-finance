@@ -216,13 +216,14 @@ const corsHeaders = {
 	"Access-Control-Allow-Methods": "OPTIONS",
 	"Access-Control-Allow-Origin": "*",
 };
+
 //const form = document.querySelector("#newLead");
 // makepost function
 async function makePost() {
-	const formData = new FormData(form);
+	const formData = new FormData(this);
 	//const jsonFormData = JSON.stringify(formData);
 	//console.log(jsonFormData);
-	console.log(form);
+	//console.log(form);
 	console.log(formData);
 	try {
 		const Response = await fetch(
