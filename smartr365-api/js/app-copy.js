@@ -5,7 +5,7 @@ const telephoneEl = document.querySelector("#telephone");
 // const checkBox = document.getElementById("accept");
 // const submitBtn = document.getElementById("submitButton");
 
-const form = document.querySelector("#newLead");
+// const form = document.querySelector("#newLead");
 
 const checkFirstName = () => {
 	let valid = false;
@@ -211,10 +211,15 @@ const corsHeaders = {
 	"Access-Control-Allow-Origin": "*",
 };
 
+const getFormData = () => {
+	const form = document.getElementById("newLead");
+	return new FormData(form);
+};
+
 // makepost function
 async function makePost() {
 	var object = {};
-	formData.forEach((value, key) => (object[key] = value));
+	FormData.forEach((value, key) => (object[key] = value));
 	var json = JSON.stringify(object);
 	// if (Request.method === "OPTIONS") {
 	// 	return new Response("OK", { headers: corsHeaders });
