@@ -200,10 +200,10 @@ async function makePost() {
 					"content-type": "application/json",
 					"x-api-key": "2528e9b2-7250-48fc-9371-4c13cd5991a4",
 					"accept": "text/plain",
-					"Access-Control-Allow-Headers": "*",
-					"Access-Control-Allow-Methods": "POST",
-					"Access-Control-Allow-Methods": "OPTIONS",
-					"Access-Control-Allow-Origin": "*",
+					// "Access-Control-Allow-Headers": "*",
+					// "Access-Control-Allow-Methods": "POST",
+					// "Access-Control-Allow-Methods": "OPTIONS",
+					// "Access-Control-Allow-Origin": "*",
 				},
 			}
 		);
