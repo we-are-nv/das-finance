@@ -187,13 +187,13 @@ async function makePost() {
 	// 	return new Response("OK", { headers: corsHeaders });
 	// }
 	// if (Request.method === "POST") {
-	const FormData = new FormData(jsonFormData);
+	const formData = new FormData(jsonFormData);
 	try {
 		const Response = await fetch(
 			"https://api.smartr365.com/api/v1/mortgage/lead/create",
 			{
 				method: "POST",
-				body: FormData,
+				body: formData,
 				// mode: "cors",
 				//credentials: 'include',
 				headers: {
