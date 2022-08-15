@@ -261,6 +261,8 @@ async function makePost() {
 
 form.addEventListener("submit", function (e) {
 	e.preventDefault();
+	const newInput = document.querySelectorAll("#newLead input");
+	console.log(newInput);
 	makePost();
 });
 
