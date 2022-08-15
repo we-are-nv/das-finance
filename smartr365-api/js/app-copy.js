@@ -220,14 +220,15 @@ const form = document.querySelector("#newLead");
 // makepost function
 async function makePost() {
 	const formData = new FormData(form);
-	const jsonFormData = JSON.stringify(formData);
-	console.log(jsonFormData);
+	//const jsonFormData = JSON.stringify(formData);
+	//console.log(jsonFormData);
+	console.log(formData);
 	try {
 		const Response = await fetch(
 			"https://api.smartr365.com/api/v1/mortgage/lead/create",
 			{
 				method: "POST",
-				body: jsonFormData,
+				body: formData,
 				mode: "cors",
 				//credentials: 'include',
 				headers: {
