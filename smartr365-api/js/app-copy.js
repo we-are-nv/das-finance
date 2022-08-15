@@ -231,7 +231,7 @@ async function makePost() {
 			"https://api.smartr365.com/api/v1/mortgage/lead/create",
 			{
 				method: "POST",
-				body: ,
+				body: formArray,
 				mode: "cors",
 				//credentials: 'include',
 				headers: {
