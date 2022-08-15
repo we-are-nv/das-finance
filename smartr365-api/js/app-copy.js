@@ -269,7 +269,7 @@ form.addEventListener("submit", async function (e) {
 		(acc, input) => ({ ...acc, [input.id]: [input.value] }),
 		{}
 	);
-	const toBeSent = formArray.slice[(0, 4)];
+	const toBeSent = formArray.slice(0, 4);
 	console.log(toBeSent);
 
 	console.log(formArray);
