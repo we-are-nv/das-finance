@@ -183,10 +183,10 @@ const corsHeaders = {
 
 //makepost function
 async function makePost() {
-	if (Request.method === "OPTIONS") {
-		return new Response("OK", { headers: corsHeaders });
-	}
-	if (Request.method === "POST") {
+	// if (Request.method == "OPTIONS") {
+	// 	return new Response("OK", { headers: corsHeaders });
+	// }
+	if (Request.method == "POST") {
 		const formData = new FormData(form);
 		try {
 			const Response = await fetch(
