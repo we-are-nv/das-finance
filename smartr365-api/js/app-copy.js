@@ -194,7 +194,7 @@ async function makePost() {
 			{
 				method: "POST",
 				body: formData,
-				mode: "cors",
+				// mode: "cors",
 				//credentials: 'include',
 				headers: {
 					"content-type": "application/json",
