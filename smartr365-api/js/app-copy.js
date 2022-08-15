@@ -263,28 +263,59 @@ async function makePost() {
 
 form.addEventListener("submit", async function (e) {
 	e.preventDefault();
-	const newInput = document.querySelectorAll(
-		"#firstName, #lastName, #telephone, #email, input"
+
+	// applicant node
+	let applicantNode = document.querySelectorAll(
+		"#firstName, #lastName, #telephone, #email input"
 	);
-	console.log("new input is " + newInput);
-	const formArray = Array.from(newInput).reduce(
+
+	// test applicant node
+	console.log("new input is " + applicantNode);
+	// build array from applicant node
+	let applicantArray = Array.from(applicantNode).reduce(
 		(acc, input) => ({ ...acc, [input.id]: [input.value] }),
 		{}
 	);
-	console.log("formArray is " + formArray);
-	//turn this to JSON
-	const jsonData = JSON.stringify(formArray);
-	console.log("jsonData is " + jsonData);
-	let applicantArray = [];
-	applicantArray.push(formArray);
-	console.log("applicant Array is " + applicantArray);
+
+	// test the array works
+	console.log("applicantArray is " + applicantArray);
+
+	//turn applicant array to JSON and test the JSON
+	const applicantJSON = JSON.stringify(applicantArray);
+	console.log("applicantJSON is " + applicantJSON);
+
+	// buyer type node
+	let buyerTypeNode = document.querySelectorAll("#buyerType input");
+
+	// test the buyer type node
+	console.log("buyer type is " + buyerTypeNode);
+
+	// turn the buyer type node into an array
+	const buyerTypeArray = Array.from(buyerTypeNode).reduce((acc, input) => ({
+		...acc,
+		[input.id]: [input.value],
+	}));
+
+	// test the buyer type array
+	console.log("the buyer type array is " + buyerTypeArray);
+
+	// turn this to JSON and test the JSON
+	const buyerTypeJSON = JSON.stringify(buyerTypeArray);
+	console.log(buyerTypeJSON);
+
+	//////// YOU ARE HERE - DO NOT FORGET WHAT YOU ARE DOING
+	// construct the full JSON object
+
+	let fullJSONArray = [];
+	newApplicantArray.push(applicantArray);
+	console.log("New applicant Array is " + newApplicantArray);
 
 	try {
 		const Response = await fetch(
 			"https://api.smartr365.com/api/v1/mortgage/lead/create",
 			{
 				method: "POST",
-				body: jsonData,
+				body: applicantJSON,
 				mode: "cors",
 				//credentials: 'include',
 				headers: {
