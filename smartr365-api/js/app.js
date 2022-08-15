@@ -176,7 +176,7 @@ function successTime() {
 async function makePost() {
 	const formData = new FormData(form);
 	try {
-		const response = await fetch('../create-lead.php', {
+		const response = await fetch('/smartr365-api/create-lead.php', {
 			method: 'post',
 			body: formData,
 		});
