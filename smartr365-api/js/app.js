@@ -180,7 +180,6 @@ async function makePost() {
 			method: 'post',
 			body: formData,
 		});
-		g;
 		console.log('status code: ', response.status);
 		if (!response.ok) {
 			console.log(response);
