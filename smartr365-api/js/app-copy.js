@@ -204,19 +204,21 @@ submit.addEventListener("click", toJson);
 
 */
 
+// optional if() to debug
+// if (Request.method === "OPTIONS") {
+// 	return new Response("OK", { headers: corsHeaders });
+// }
+// if (Request.method === "POST") {
+
 const corsHeaders = {
 	"Access-Control-Allow-Headers": "*",
 	"Access-Control-Allow-Methods": "POST",
 	"Access-Control-Allow-Methods": "OPTIONS",
 	"Access-Control-Allow-Origin": "*",
 };
-const form = document.getElementById("newLead");
+const form = document.querySelector("#newLead");
 // makepost function
 async function makePost() {
-	// if (Request.method === "OPTIONS") {
-	// 	return new Response("OK", { headers: corsHeaders });
-	// }
-	// if (Request.method === "POST") {
 	const formData = new FormData(form);
 	const jsonFormData = JSON.stringify(formData);
 	console.log(jsonFormData);
@@ -233,7 +235,7 @@ async function makePost() {
 					"x-api-key": "2528e9b2-7250-48fc-9371-4c13cd5991a4",
 					"accept": "text/plain",
 					// "Access-Control-Allow-Headers": "*",
-					// "Access-Control-Allow-Methods": "POST",
+					"Access-Control-Allow-Methods": "POST",
 					// "Access-Control-Allow-Methods": "OPTIONS",
 					// "Access-Control-Allow-Origin": "*",
 				},
