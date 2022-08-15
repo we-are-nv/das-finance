@@ -180,7 +180,7 @@ const corsHeaders = {
 	"Access-Control-Allow-Methods": "OPTIONS",
 	"Access-Control-Allow-Origin": "*",
 };
-const jsonFormData = JSON.stringify(form);
+// const jsonFormData = JSON.stringify(form);
 //makepost function
 async function makePost() {
 	// if (Request.method === "OPTIONS") {
