@@ -209,7 +209,7 @@ submit.addEventListener("click", toJson);
 // 	return new Response("OK", { headers: corsHeaders });
 // }
 // if (Request.method === "POST") {
-
+/*
 const corsHeaders = {
 	"Access-Control-Allow-Headers": "*",
 	"Access-Control-Allow-Methods": "POST",
@@ -220,58 +220,13 @@ const newInput = document.querySelectorAll("#newLead input");
 console.log(newInput);
 //const form = document.querySelector("#newLead");
 // makepost function
-// async function makePost() {
-// 	//const formData = new FormData(form);
-// 	//const jsonFormData = JSON.stringify(formData);
-// 	//console.log(jsonFormData);
-// 	//console.log(form);
-// 	//console.log(formData);
-// 	try {
-// 		const Response = await fetch(
-// 			"https://api.smartr365.com/api/v1/mortgage/lead/create",
-// 			{
-// 				method: "POST",
-// 				body: formArray,
-// 				mode: "cors",
-// 				//credentials: 'include',
-// 				headers: {
-// 					"content-type": "application/json",
-// 					"x-api-key": "2528e9b2-7250-48fc-9371-4c13cd5991a4",
-// 					"accept": "text/plain",
-// 					// "Access-Control-Allow-Headers": "*",
-// 					"Access-Control-Allow-Methods": "POST",
-// 					// "Access-Control-Allow-Methods": "OPTIONS",
-// 					// "Access-Control-Allow-Origin": "*",
-// 				},
-// 			}
-// 		);
-// 		console.log("status code: ", Response.status);
-// 		if (!Response.ok) {
-// 			console.log(Response);
-// 			throw new Error(`Error! status; ${Response.status}`);
-// 		} else {
-// 			successTime();
-// 		}
-// 		const result = await Response.json();
-// 		return result;
-// 	} catch (err) {
-// 		console.log(err);
-// 	}
-// }
-
-async function postTheData() {
-	form.addEventListener("submit", function (e) {
-		e.preventDefault();
-		const formInput = document.querySelectorAll("#newLead input");
-		console.log(formInput);
-		const formArray = Array.from(formInput).reduce(
-			(acc, input) => ({ ...acc, [input.id]: [input.value] }),
-			{}
-		);
-
-        console.log(formArray);
-        
-        try {
+async function makePost() {
+	//const formData = new FormData(form);
+	//const jsonFormData = JSON.stringify(formData);
+	//console.log(jsonFormData);
+	//console.log(form);
+	//console.log(formData);
+	try {
 		const Response = await fetch(
 			"https://api.smartr365.com/api/v1/mortgage/lead/create",
 			{
@@ -302,9 +257,52 @@ async function postTheData() {
 	} catch (err) {
 		console.log(err);
 	}
-
-	});
 }
+
+*/
+
+form.addEventListener("submit", async function (e) {
+	e.preventDefault();
+	const newInput = document.querySelectorAll("#newLead input");
+	console.log(newInput);
+	const formArray = Array.from(newInput).reduce(
+		(acc, input) => ({ ...acc, [input.id]: [input.value] }),
+		{}
+	);
+
+	console.log(formArray);
+	try {
+		const Response = await fetch(
+			"https://api.smartr365.com/api/v1/mortgage/lead/create",
+			{
+				method: "POST",
+				body: formArray,
+				mode: "cors",
+				//credentials: 'include',
+				headers: {
+					"content-type": "application/json",
+					"x-api-key": "2528e9b2-7250-48fc-9371-4c13cd5991a4",
+					"accept": "text/plain",
+					// "Access-Control-Allow-Headers": "*",
+					"Access-Control-Allow-Methods": "POST",
+					// "Access-Control-Allow-Methods": "OPTIONS",
+					// "Access-Control-Allow-Origin": "*",
+				},
+			}
+		);
+		console.log("status code: ", Response.status);
+		if (!Response.ok) {
+			console.log(Response);
+			throw new Error(`Error! status; ${Response.status}`);
+		} else {
+			successTime();
+		}
+		const result = await Response.json();
+		return result;
+	} catch (err) {
+		console.log(err);
+	}
+});
 
 // real time validation
 function debounce(fn, delay = 500) {
