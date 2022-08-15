@@ -183,41 +183,42 @@ const corsHeaders = {
 
 //makepost function
 async function makePost() {
-	// if (Request.method === "OPTIONS") {
-	// 	return new Response("OK", { headers: corsHeaders });
-	// }
-	// if (Request.method === "POST") {
-	const formData = new FormData(form);
-	try {
-		const Response = await fetch(
-			"https://api.smartr365.com/api/v1/mortgage/lead/create",
-			{
-				method: "POST",
-				body: formData,
-				// mode: "cors",
-				//credentials: 'include',
-				headers: {
-					"content-type": "application/json",
-					"x-api-key": "2528e9b2-7250-48fc-9371-4c13cd5991a4",
-					"accept": "text/plain",
-					// "Access-Control-Allow-Headers": "*",
-					// "Access-Control-Allow-Methods": "POST",
-					// "Access-Control-Allow-Methods": "OPTIONS",
-					// "Access-Control-Allow-Origin": "*",
-				},
+	if (Request.method === "OPTIONS") {
+		return new Response("OK", { headers: corsHeaders });
+	}
+	if (Request.method === "POST") {
+		const formData = new FormData(form);
+		try {
+			const Response = await fetch(
+				"https://api.smartr365.com/api/v1/mortgage/lead/create",
+				{
+					method: "POST",
+					body: formData,
+					// mode: "cors",
+					//credentials: 'include',
+					headers: {
+						"content-type": "application/json",
+						"x-api-key": "2528e9b2-7250-48fc-9371-4c13cd5991a4",
+						"accept": "text/plain",
+						// "Access-Control-Allow-Headers": "*",
+						// "Access-Control-Allow-Methods": "POST",
+						// "Access-Control-Allow-Methods": "OPTIONS",
+						// "Access-Control-Allow-Origin": "*",
+					},
+				}
+			);
+			console.log("status code: ", Response.status);
+			if (!Response.ok) {
+				console.log(Response);
+				throw new Error(`Error! status; ${Response.status}`);
+			} else {
+				successTime();
 			}
-		);
-		console.log("status code: ", Response.status);
-		if (!Response.ok) {
-			console.log(Response);
-			throw new Error(`Error! status; ${Response.status}`);
-		} else {
-			successTime();
+			const result = await Response.json();
+			return result;
+		} catch (err) {
+			console.log(err);
 		}
-		const result = await Response.json();
-		return result;
-	} catch (err) {
-		console.log(err);
 	}
 }
 
