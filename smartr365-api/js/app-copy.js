@@ -274,7 +274,7 @@ form.addEventListener("submit", async function (e) {
 		},
 	};
 
-	newLead.buyerType = document.getElementById("buyerType");
+	newLead.buyerType = document.querySelectorAll("buyerType, input");
 	newLead.applicants.email = emailEl;
 	newLead.applicants.firstName = firstNameEl;
 	newLead.applicants.lastName = lastNameEl;
