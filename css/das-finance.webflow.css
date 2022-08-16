@@ -4,18 +4,6 @@
   --warning-color: #ffc107;
 }
 
-body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100%;
-  width: auto;
-  background-color: #454f53;
-  padding: none;
-}
 
 /* 
 .container {
@@ -25,15 +13,9 @@ body {
     max-width: 700px;
 } */
 
-form {
-  padding: none;
-}
 
-h1 {
-  font-size: 1.5em;
-  text-align: center;
-  margin-bottom: 20px;
-  color: #00b8ac;
+.wrapper {
+  padding-right: 40px;
 }
 
 .form-field {
@@ -77,6 +59,7 @@ h1 {
 
 .form-field .submitButton,
 .clear#reset {
+  color: white;
   height: 2.6em;
   margin-bottom: 1.2rem;
   background-color: #00b8ac;
