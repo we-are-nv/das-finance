@@ -1,3 +1,186 @@
+:root {
+  --error-color: #dc3545;
+  --success-color: #28a745;
+  --warning-color: #ffc107;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  width: auto;
+  background-color: #454f53;
+  padding: none;
+}
+
+/* 
+.container {
+    padding: none;
+    height: auto;
+    background-color: #454f53;
+    max-width: 700px;
+} */
+
+form {
+  padding: none;
+}
+
+h1 {
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #00b8ac;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+  color: #00b8ac;
+}
+
+.form-field input {
+  height: 2em;
+  border: rgb(255, 255, 255);
+  border-radius: 0;
+  border-style: solid;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-field input:focus {
+  outline: none;
+}
+
+.form-field.error input {
+  border-color: var(--error-color);
+}
+
+.form-field.success input {
+  border-color: var(--success-color);
+}
+
+.form-field small {
+  color: var(--error-color);
+}
+
+.buyerType {
+  color: #699391;
+}
+
+.form-field .submitButton,
+.clear#reset {
+  height: 2.6em;
+  margin-bottom: 1.2rem;
+  background-color: #00b8ac;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.submitButton#submitButton:hover {
+  background-color: transparent;
+  color: #00b8ac;
+  border: solid 5px #00b8ac;
+}
+
+.clear#reset:hover {
+  background-color: aquamarine;
+}
+
+.dropdown select {
+  background-color: #699391;
+  color: white;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  font-size: 20px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
+}
+
+.dropdown::before {
+  height: 100%;
+  text-align: center;
+  font-size: 28px;
+  line-height: 45px;
+  background-color: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+.dropdown:hover::before {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.dropdown select option {
+  padding: 30px;
+}
+
+.check-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.form-field #accept {
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.successH1 {
+  text-align: center;
+}
+
+.successMsg {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  border: 3px solid #00b8ac;
+  padding: 20px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 300px;
+  color: #00b8ac;
+  font-size: 16px;
+}
+
+.contact-number {
+  font-size: 20;
+}
+
+.numberLink {
+  text-align: center;
+}
+
+
 body {
   background-color: #121e2b;
   font-family: 'IBM Plex Sans', sans-serif;
