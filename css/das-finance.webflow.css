@@ -20,6 +20,10 @@
   padding-right: 40px;
 }
 
+.form-field-label {
+  color: black;
+}
+
 .form-field {
   display: flex;
   flex-direction: column;
@@ -32,6 +36,7 @@
   border: rgb(255, 255, 255);
   border-radius: 0;
   border-style: solid;
+  color: black;
 }
 
 .form-field label {
