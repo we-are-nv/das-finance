@@ -274,7 +274,7 @@ form.addEventListener("submit", async function (e) {
 		},
 	};
 
-	newLead.buyerType = document.querySelectorAll("buyerType, input");
+	newLead.buyerType = document.getElementById("buyerType");
 	newLead.applicants.email = emailEl;
 	newLead.applicants.firstName = firstNameEl;
 	newLead.applicants.lastName = lastNameEl;
@@ -284,6 +284,8 @@ form.addEventListener("submit", async function (e) {
 
 	const newLeadAsJSON = JSON.stringify(newLead);
 	console.log(newLeadAsJSON);
+	const newLeadAsObject = JsonObjectAttribute(newLeadAsJSON);
+	console.log(newLeadAsObject);
 
 	try {
 		const Response = await fetch(
