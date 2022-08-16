@@ -284,15 +284,15 @@ form.addEventListener("submit", async function (e) {
 
 	const newLeadAsJSON = JSON.stringify(newLead);
 	console.log(newLeadAsJSON);
-	const newLeadAsObject = JsonObjectAttribute(newLeadAsJSON);
-	console.log(newLeadAsObject);
+	//const newLeadAsObject = JsonObjectAttribute(newLeadAsJSON);
+	//console.log(newLeadAsObject);
 
 	try {
 		const Response = await fetch(
 			"https://api.smartr365.com/api/v1/mortgage/lead/create",
 			{
 				method: "POST",
-				body: newLead,
+				body: newLeadAsJSON,
 				mode: "cors",
 				//credentials: 'include',
 				headers: {
