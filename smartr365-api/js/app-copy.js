@@ -196,8 +196,8 @@ form.addEventListener("submit", async function (e) {
 
 	newLead.applicants = applicants;
 
-	console.log(newLead);
-	console.log("json string is" + JSON.stringify(newLead));
+	// console.log(newLead);
+	// console.log("json string is" + JSON.stringify(newLead));
 	JSONLead = JSON.stringify(newLead);
 	try {
 		const Response = await fetch(
