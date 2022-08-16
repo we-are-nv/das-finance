@@ -117,12 +117,10 @@ let evalResult = "";
 
 function showBox() {
 	document.getElementById("terms").style.visibility = "visible";
-	console.log("a wild box appeared!");
 }
 
 function hideBox() {
 	document.getElementById("terms").style.visibility = "hidden";
-	console.log("the box fled!");
 }
 
 // validation runs on every input and only shows the checkbox
@@ -208,15 +206,11 @@ form.addEventListener("submit", async function (e) {
 				method: "POST",
 				body: JSONLead,
 				mode: "cors",
-				//credentials: 'include',
 				headers: {
 					"content-type": "application/json",
 					"x-api-key": "2528e9b2-7250-48fc-9371-4c13cd5991a4",
 					"accept": "text/plain",
-					// "Access-Control-Allow-Headers": "*",
 					"Access-Control-Allow-Methods": "POST",
-					// "Access-Control-Allow-Methods": "OPTIONS",
-					// "Access-Control-Allow-Origin": "*",
 				},
 			}
 		);
