@@ -179,11 +179,13 @@ form.addEventListener("submit", async function (e) {
 	const lastNameEl = document.getElementById("lastName");
 	const emailEl = document.getElementById("email");
 	const telephoneEl = document.getElementById("telephone");
+	const orgId = "d75acf39-07c4-4c63-995a-e7055c58c973";
 
 	let applicants = [];
 	let newLead = {};
 	newLead = {
-		buyerType: buyerType.value,
+		"buyerType": buyerType.value,
+		"organisation-Id": orgId,
 	};
 	applicants = [
 		{
