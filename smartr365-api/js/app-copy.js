@@ -265,13 +265,15 @@ form.addEventListener("submit", async function (e) {
 	e.preventDefault();
 
 	let newLead = {
-		buyerType: "",
-		applicants: {
-			email: "",
-			firstName: "",
-			lastName: "",
-			telephone: "",
-		},
+		buyerType: [""],
+		applicants: [
+			{
+				email: [""],
+				firstName: [""],
+				lastName: [""],
+				telephone: [""],
+			},
+		],
 	};
 
 	newLead.buyerType = document.getElementById("buyerType");
