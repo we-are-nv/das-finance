@@ -161,8 +161,8 @@ const wrapper = document.getElementById("wrapper");
 const formWrap = document.getElementById("formWrap");
 const successMsg = document.getElementById("successMsg");
 const applicantH1 = document.getElementById("applicantH1");
-successMsg.style.display = "none";
 
+successMsg.style.display = "none";
 function successTime() {
 	successMsg.style.display = "flex";
 	applicantH1.style.display = "none";
