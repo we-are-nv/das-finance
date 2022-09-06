@@ -1,11 +1,11 @@
-const firstNameEl = document.querySelector("#firstName");
-const lastNameEl = document.querySelector("#lastName");
-const emailEl = document.querySelector("#email");
-const telephoneEl = document.querySelector("#telephone");
+const firstNameEl = document.querySelector('#firstName');
+const lastNameEl = document.querySelector('#lastName');
+const emailEl = document.querySelector('#email');
+const telephoneEl = document.querySelector('#telephone');
 // const checkBox = document.getElementById("accept");
 // const submitBtn = document.getElementById("submitButton");
 
-const form = document.querySelector("#newLead");
+const form = document.querySelector('#newLead');
 
 const checkFirstName = () => {
 	let valid = false;
@@ -13,9 +13,9 @@ const checkFirstName = () => {
 	const firstName = firstNameEl.value.trim();
 
 	if (!isRequired(firstName)) {
-		showError(firstNameEl, "First name cannot be left blank");
+		showError(firstNameEl, 'First name cannot be left blank');
 	} else if (!isFirstNameValid(firstName)) {
-		showError(firstNameEl, "First name must only contain letters");
+		showError(firstNameEl, 'First name must only contain letters');
 	} else {
 		showSuccess(firstNameEl);
 		valid = true;
@@ -29,9 +29,9 @@ const checkLastName = () => {
 	const lastName = lastNameEl.value.trim();
 
 	if (!isRequired(lastName)) {
-		showError(lastNameEl, "Last name cannot be left blank");
+		showError(lastNameEl, 'Last name cannot be left blank');
 	} else if (!isLastNameValid(lastName)) {
-		showError(lastNameEl, "Last name must only contain letters");
+		showError(lastNameEl, 'Last name must only contain letters');
 	} else {
 		showSuccess(lastNameEl);
 		valid = true;
@@ -43,9 +43,9 @@ const checkEmail = () => {
 	let valid = false;
 	const email = emailEl.value.trim();
 	if (!isRequired(email)) {
-		showError(emailEl, "Email field cannot be left blank");
+		showError(emailEl, 'Email field cannot be left blank');
 	} else if (!isEmailValid(email)) {
-		showError(emailEl, "Email is not valid");
+		showError(emailEl, 'Email is not valid');
 	} else {
 		showSuccess(emailEl);
 		valid = true;
@@ -56,9 +56,9 @@ const checkTelephone = () => {
 	let valid = false;
 	const telephone = telephoneEl.value.trim();
 	if (!isRequired(telephone)) {
-		showError(telephoneEl, "Telephone field cannot be left blank");
+		showError(telephoneEl, 'Telephone field cannot be left blank');
 	} else if (!isTelephoneValid(telephone)) {
-		showError(telephoneEl, "Number is not valid");
+		showError(telephoneEl, 'Number is not valid');
 	} else {
 		showSuccess(telephoneEl);
 		valid = true;
@@ -87,52 +87,50 @@ const isTelephoneValid = (telephone) => {
 	return re.test(telephone);
 };
 
-const isRequired = (value) => (value === "" ? false : true);
+const isRequired = (value) => (value === '' ? false : true);
 
 const showError = (input, message) => {
 	const formField = input.parentElement;
-	formField.classList.remove("success");
-	formField.classList.add("error");
+	formField.classList.remove('success');
+	formField.classList.add('error');
 
-	const error = formField.querySelector("small");
+	const error = formField.querySelector('small');
 	error.textContent = message;
 };
 
 const showSuccess = (input) => {
 	const formField = input.parentElement;
 
-	formField.classList.remove("error");
-	formField.classList.add("success");
+	formField.classList.remove('error');
+	formField.classList.add('success');
 
-	const error = formField.querySelector("small");
-	error.textContent = "";
+	const error = formField.querySelector('small');
+	error.textContent = '';
 };
 
 //final validation for the form
-const submitBtn = document.getElementById("submitButton");
-let hiddenBox = (document.getElementById("terms").style.visibility = "hidden");
-let evalResult = "";
+const submitBtn = document.getElementById('submitButton');
+let hiddenBox = (document.getElementById('terms').style.visibility = 'hidden');
+let evalResult = '';
 
 //show or hide the terms and conditions check box
 
 function showBox() {
-	document.getElementById("terms").style.visibility = "visible";
+	document.getElementById('terms').style.visibility = 'visible';
 }
 
 function hideBox() {
-	document.getElementById("terms").style.visibility = "hidden";
+	document.getElementById('terms').style.visibility = 'hidden';
 }
 
 // validation runs on every input and only shows the checkbox
 // when the form is completely vaslidated
 
-let valid = "";
+let valid = '';
 
-document.querySelector("form").addEventListener("input", function () {
+document.querySelector('form').addEventListener('input', function () {
 	let valid = false;
-	if (
-		(checkFirstName(), checkLastName(), checkEmail(), checkTelephone() === true)
-	) {
+	if ((checkFirstName(), checkLastName(), checkEmail(), checkTelephone() === true)) {
 		valid = true;
 	} else {
 		valid = false;
@@ -145,10 +143,10 @@ document.querySelector("form").addEventListener("input", function () {
 	}
 });
 
-const cb = document.querySelector("#accept");
-console.log("it is" + cb.checked);
+const cb = document.querySelector('#accept');
+console.log('it is' + cb.checked);
 
-cb.addEventListener("click", function () {
+cb.addEventListener('click', function () {
 	if (cb.checked === true) {
 		submitBtn.disabled = false;
 	} else {
@@ -157,33 +155,33 @@ cb.addEventListener("click", function () {
 });
 
 // post the data
-const wrapper = document.getElementById("wrapper");
-const formWrap = document.getElementById("formWrap");
-const successMsg = document.getElementById("successMsg");
-const applicantH1 = document.getElementById("applicantH1");
-successMsg.style.display = "none";
+const wrapper = document.getElementById('wrapper');
+const formWrap = document.getElementById('formWrap');
+const successMsg = document.getElementById('successMsg');
+const applicantH1 = document.getElementById('applicantH1');
 
+successMsg.style.display = 'none';
 function successTime() {
-	successMsg.style.display = "flex";
-	applicantH1.style.display = "none";
-	successMsg.style.flexDirection = "column";
-	formWrap.style.display = "none";
+	successMsg.style.display = 'flex';
+	applicantH1.style.display = 'none';
+	successMsg.style.flexDirection = 'column';
+	formWrap.style.display = 'none';
 }
 
-form.addEventListener("submit", async function (e) {
+form.addEventListener('submit', async function (e) {
 	e.preventDefault();
-	const buyerType = document.getElementById("buyerType");
-	const firstNameEl = document.getElementById("firstName");
-	const lastNameEl = document.getElementById("lastName");
-	const emailEl = document.getElementById("email");
-	const telephoneEl = document.getElementById("telephone");
-	const orgId = "d75acf39-07c4-4c63-995a-e7055c58c973";
+	const buyerType = document.getElementById('buyerType');
+	const firstNameEl = document.getElementById('firstName');
+	const lastNameEl = document.getElementById('lastName');
+	const emailEl = document.getElementById('email');
+	const telephoneEl = document.getElementById('telephone');
+	const orgId = 'd75acf39-07c4-4c63-995a-e7055c58c973';
 
 	let applicants = [];
 	let newLead = {};
 	newLead = {
-		"buyerType": buyerType.value,
-		"organisationId": orgId,
+		'buyerType': buyerType.value,
+		'organisationId': orgId,
 	};
 	applicants = [
 		{
@@ -200,21 +198,18 @@ form.addEventListener("submit", async function (e) {
 	// console.log("json string is" + JSON.stringify(newLead));
 	JSONLead = JSON.stringify(newLead);
 	try {
-		const Response = await fetch(
-			"https://api.smartr365.com/api/v1/mortgage/lead/create",
-			{
-				method: "POST",
-				body: JSONLead,
-				mode: "cors",
-				headers: {
-					"content-type": "application/json",
-					"x-api-key": "d4d6c55f-2c37-4ebc-b2e0-381cdead583e",
-					"accept": "text/plain",
-					"Access-Control-Allow-Methods": "POST",
-				},
-			}
-		);
-		console.log("status code: ", Response.status);
+		const Response = await fetch('https://api.smartr365.com/api/v1/mortgage/lead/create', {
+			method: 'POST',
+			body: JSONLead,
+			mode: 'cors',
+			headers: {
+				'content-type': 'application/json',
+				'x-api-key': 'd4d6c55f-2c37-4ebc-b2e0-381cdead583e',
+				'accept': 'text/plain',
+				'Access-Control-Allow-Methods': 'POST',
+			},
+		});
+		console.log('status code: ', Response.status);
 		if (!Response.ok) {
 			console.log(Response);
 			throw new Error(`Error! status; ${Response.status}`);
@@ -244,19 +239,19 @@ function debounce(fn, delay = 500) {
 
 //event delegation
 form.addEventListener(
-	"input",
+	'input',
 	debounce(function (e) {
 		switch (e.target.id) {
-			case "firstName":
+			case 'firstName':
 				checkFirstName();
 				break;
-			case "lastName":
+			case 'lastName':
 				checkLastName();
 				break;
-			case "email":
+			case 'email':
 				checkEmail();
 				break;
-			case "telephone":
+			case 'telephone':
 				checkTelephone();
 				break;
 		}
