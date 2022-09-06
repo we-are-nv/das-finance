@@ -3656,14 +3656,18 @@ p {
   align-items: center;
 }
 
+/* #contactus>div.w-col-4 {} */
+
 .div-block-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  justify-content: center;
   max-width: 99.9999659625899%;
   min-width: 100%;
   padding: 20px;
+
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -3673,6 +3677,7 @@ p {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  row-gap: ;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
@@ -3729,7 +3734,7 @@ p {
 }
 
 .section-5 {
-  padding: 40px 2px 40px 20px;
+  padding: 40px 40px 40px 40px;
 }
 
 .div-block-12 {
@@ -4201,6 +4206,11 @@ p {
   .faq__item {
     padding-top: 60px;
     padding-bottom: 60px;
+  }
+
+  #contactus.section-5 {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
   }
 }
 
@@ -4937,6 +4947,9 @@ p {
   .clients-title {
     margin-bottom: 32px;
   }
+
+  /* WEARENV CUSTOM ADDITIONS */
+
 }
 
 @media screen and (max-width: 767px) {
@@ -6369,4 +6382,3 @@ p {
     grid-row-end: 6;
   }
 }
-
