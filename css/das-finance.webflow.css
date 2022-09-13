@@ -5513,6 +5513,10 @@ p {
 		margin-bottom: 30px;
 		margin-left: 20px;
 	}
+		.queenbar {
+			background-image: -webkit-gradient(linear, left top, right top, color-stop(49%, #000), color-stop(82%, #5f005f));
+			background-image: linear-gradient(90deg, #000 49%, #5f005f 82%);
+		}
 }
 
 @media screen and (max-width: 479px) {
