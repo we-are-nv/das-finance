@@ -798,8 +798,10 @@ p {
 	display: block;
 	width: 100%;
 	height: 100%;
-	background-image: -webkit-gradient(linear, right top, left top, from(#121e2b), color-stop(41%, hsla(0, 0%, 100%, 0)));
-	background-image: linear-gradient(270deg, #121e2b, hsla(0, 0%, 100%, 0) 41%);
+	background-image: -webkit-gradient(linear, right top, left top, from(rgba(18, 30, 43, 0.66)), color-stop(41%, hsla(0, 0%, 100%, 0))), url('../images/pexels-rodnae-productions-8292884.jpg');
+	background-image: linear-gradient(270deg, rgba(18, 30, 43, 0.66), hsla(0, 0%, 100%, 0) 41%), url('../images/pexels-rodnae-productions-8292884.jpg');
+	background-position: 0px 0px, 50% 25%;
+	background-size: auto, auto;
 	opacity: 1;
 }
 
