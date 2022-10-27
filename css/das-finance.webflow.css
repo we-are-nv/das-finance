@@ -4,7 +4,7 @@
 	--warning-color: #ffc107;
 }
 
-/* 
+/*
 .container {
     padding: none;
     height: auto;
@@ -3700,7 +3700,7 @@ p {
 	justify-content: center;
 	max-width: 99.9999659625899%;
 	min-width: 100%;
-	padding: 20px;
+	/* padding: 20px; */
 
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
@@ -3917,8 +3917,8 @@ p {
 }
 
 .div-block-19 {
-	max-width: 80%;
-	min-width: 80%;
+	max-width: 90%;
+	min-width: 90%;
 }
 
 .section-6 {
@@ -4349,6 +4349,7 @@ p {
 }
 
 .queenbar {
+	display: none !important;
 	background-color: #000;
 	background-image: -webkit-gradient(linear, left top, right top, color-stop(26%, #000), color-stop(89%, #5f005f));
 	background-image: linear-gradient(90deg, #000 26%, #5f005f 89%);
@@ -4365,8 +4366,8 @@ p {
 	}
 
 	#contactus.section-5 {
-		padding-left: 40px !important;
-		padding-right: 40px !important;
+		padding-left: 650px !important;
+		padding-right: 650px !important;
 	}
 }
 
@@ -5093,9 +5094,9 @@ p {
 		font-size: 2.7em;
 	}
 
-	.image-5 {
+	/* .image-5 {
 		max-width: none;
-	}
+	} */
 
 	.image-5.loc {
 		max-width: none;
@@ -5115,6 +5116,25 @@ p {
 
 	.clients-title {
 		margin-bottom: 32px;
+	}
+
+	.w-col-6 {
+		width: 100%
+	}
+
+	.div-block-19 {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.column-7.w-col.w-col-6 {
+		height: 400px;
+		padding-bottom: 20px;
+	}
+
+	.columns-3.right.w-row {
+		flex-direction: column !important;
+
 	}
 
 	/* WEARENV CUSTOM ADDITIONS */
@@ -5528,6 +5548,8 @@ p {
 		background-image: -webkit-gradient(linear, left top, right top, color-stop(49%, #000), color-stop(82%, #5f005f));
 		background-image: linear-gradient(90deg, #000 49%, #5f005f 82%);
 	}
+
+
 }
 
 @media screen and (max-width: 479px) {
@@ -6554,6 +6576,10 @@ p {
 		background-image: -webkit-gradient(linear, left top, right top, color-stop(42%, #000), color-stop(82%, #5f005f));
 		background-image: linear-gradient(90deg, #000 42%, #5f005f 82%);
 	}
+
+	.div-block-11>h1 {
+		display: none !important;
+	}
 }
 
 @media screen and (max-width: 479px) {
@@ -6566,7 +6592,10 @@ p {
 		grid-row-start: 4;
 		-ms-grid-row-span: 1;
 		grid-row-end: 5;
+
 	}
+
+
 
 	#w-node-a81e05cb-bd40-d0df-5260-d2ce6fcffc27-6fcffc16 {
 		-ms-grid-column: 1;
