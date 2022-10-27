@@ -798,8 +798,8 @@ p {
 	display: block;
 	width: 100%;
 	height: 100%;
-	background-image: -webkit-gradient(linear, right top, left top, from(rgba(18, 30, 43, 0.66)), color-stop(41%, hsla(0, 0%, 100%, 0))), url('../images/pexels-rodnae-productions-8292884.jpg');
-	background-image: linear-gradient(270deg, rgba(18, 30, 43, 0.66), hsla(0, 0%, 100%, 0) 41%), url('../images/pexels-rodnae-productions-8292884.jpg');
+	background-image: -webkit-gradient(linear, right top, left top, from(rgba(18, 30, 43, 0.66)), color-stop(41%, hsla(0, 0%, 100%, 0))), url('../images/pexels-rodnae-productions-8292884.jpg') !important;
+	background-image: linear-gradient(270deg, rgba(18, 30, 43, 0.66), hsla(0, 0%, 100%, 0) 41%), url('../images/pexels-rodnae-productions-8292884.jpg') o !important;
 	background-position: 0px 0px, 50% 25%;
 	background-size: auto, auto;
 	opacity: 1;
@@ -4667,6 +4667,7 @@ p {
 		background-image: -webkit-gradient(linear, left bottom, left top, from(#454f53), color-stop(44%, #2bded3), to(transparent));
 		background-image: linear-gradient(0deg, #454f53, #2bded3 44%, transparent);
 	}
+
 
 	.hero-intro {
 		padding-left: 5em;
