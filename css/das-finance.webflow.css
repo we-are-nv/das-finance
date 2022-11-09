@@ -2742,7 +2742,6 @@ p {
 	display: -ms-flexbox;
 	display: flex;
 	width: 100%;
-	height: 30em;
 	padding-top: 4em;
 	padding-right: 4em;
 	padding-left: 4em;
@@ -2783,10 +2782,11 @@ p {
 	margin-left: 0px;
 	padding-top: 30px;
 	padding-bottom: 30px;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	-ms-flex-pack: center;
-	justify-content: center;
+	gap: 1em;
+	-webkit-box-pack: space-evenly;
+	-webkit-justify-content: space-evenly;
+	-ms-flex-pack: space-evenly;
+	justify-content: space-evenly;
 }
 
 .speaker-image-cover {
@@ -4248,9 +4248,9 @@ p {
 	-webkit-flex-direction: column;
 	-ms-flex-direction: column;
 	flex-direction: column;
-	-webkit-justify-content: space-around;
-	-ms-flex-pack: distribute;
-	justify-content: space-around;
+	-webkit-justify-content: flex-start;
+	/* -ms-flex-pack: distribute; */
+	justify-content: flex-start;
 }
 
 .section-7 {
