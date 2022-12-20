@@ -3715,7 +3715,6 @@ div.w-row {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	align-items: baseline;
 	gap: 1.6em;
 }
 
@@ -6672,8 +6671,14 @@ div.w-row {
 
 .nav-wrapper {
 	width: 100%;
-	position: fixed;
+	position: sticky;
 	top: 0;
 	right: 0;
 	z-index: 99999;
 }
+
+.columns-2.w-row {
+	align-items: baseline;
+	margin-top: 40px;
+}
+
