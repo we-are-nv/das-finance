@@ -5182,6 +5182,10 @@ div.w-row {
 		height: auto;
 	}
 
+	.columns-2.w-row {
+		flex-direction: column;
+	}
+
 	/* WEARENV CUSTOM ADDITIONS */
 }
 
@@ -5602,6 +5606,11 @@ div.w-row {
 		width: 100%;
 		height: auto;
 	}
+
+	.columns-3.w-row {
+		flex-direction: column;
+	}
+
 
 
 }
@@ -6681,4 +6690,3 @@ div.w-row {
 	align-items: baseline;
 	margin-top: 40px;
 }
-
