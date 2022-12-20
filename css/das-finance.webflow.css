@@ -2255,7 +2255,7 @@ p {
 
 .body-paragraphy.light {
 	color: #fff;
-	font-size: 1.25em;
+	/* font-size: 1.25em; */
 	font-weight: 400;
 }
 
