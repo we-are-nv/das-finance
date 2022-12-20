@@ -420,6 +420,19 @@ p {
 	text-decoration: none;
 }
 
+.contact-link.tel-link {
+	padding: 1em 0;
+	color: #fff;
+}
+
+
+
+
+
+.contact-link.tel-link:hover {
+	color: #454f53
+}
+
 .nav-link:hover {
 	color: #fff;
 }
