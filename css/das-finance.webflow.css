@@ -5164,7 +5164,7 @@ div.w-row {
 	}
 
 	.column-7.w-col.w-col-6 {
-		height: 400px;
+		/* height: 400px; */
 		padding-bottom: 20px;
 	}
 
@@ -5290,9 +5290,6 @@ div.w-row {
 		align-items: center;
 	}
 
-	/* .img-gradient {
-		display: none;
-	} */
 
 	.img-gradient.is--divider {
 		display: block;
