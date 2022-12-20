@@ -4383,10 +4383,10 @@ div.w-row {
 }
 
 .queenbar {
-	display: none !important;
-	background-color: #000;
-	background-image: -webkit-gradient(linear, left top, right top, color-stop(26%, #000), color-stop(89%, #5f005f));
-	background-image: linear-gradient(90deg, #000 26%, #5f005f 89%);
+	/* display: none !important; */
+	background-color: rgba(105, 147, 145, 0.56);
+	background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(#699391));
+	background-image: linear-gradient(90deg, #699391, #fff);
 }
 
 @media screen and (min-width: 1440px) {
