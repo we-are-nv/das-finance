@@ -5290,9 +5290,9 @@ div.w-row {
 		align-items: center;
 	}
 
-	.img-gradient {
+	/* .img-gradient {
 		display: none;
-	}
+	} */
 
 	.img-gradient.is--divider {
 		display: block;
