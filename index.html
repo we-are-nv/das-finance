@@ -63,7 +63,6 @@
         </div>
       </div>
       <div class="nav-links">
-        <a href="#widget-section" class="nav-link">Finance Calculators</a>
         <a href="about-das-finance.html" class="nav-link">About Us</a>
         <div data-hover="true" data-delay="500" class="w-dropdown">
           <div class="nav-link drop w-dropdown-toggle">
@@ -101,7 +100,10 @@
               </div>
               <div class="section_cta">
                 <a href="about-das-finance.html" class="button our-team w-button">About us</a>
-                <a href="contact-us.html" class="button is--ghost w-button">Get in touch</a>
+                <a href="contact-us.html" class="button is--ghost w-button">Get a quote</a>
+                <a href="#stamp-duty-calculator" class="button our-team w-button">Stamp Duty Calculator</a>
+                <a href="#mortgage-calculator" class="button our-team w-button">Mortgage Calculator</a>
+
               </div>
             </div>
           </div>
@@ -387,67 +389,9 @@
           <div class="left-form-text">
             <div class="hero-intro_wrapper calendly">
               <div class="html-embed-5 w-embed w-iframe">
-                <div class="wrapper">
-                  <div class="successMsg" id="successMsg">
-                    <h2>Success</h2>
-                    <p>One of our team will be in contact soon about your application</p>
-                    <img src="" alt="" />
-                    <p> To contact us about your application, please give us a call on </p>
-                    <p>
-                      <a href="tel:">
-                        <span class="contact-number">0333 344 9422</a>
-                    </p>
-                  </div>
-                  <div class="container-lead" id="formWrap">
-                    <h1 class="form-h1" id="applicantH1">Applicant Form</h1>
-                    <!-- <form action="/das-finance/smartr365-api/js/create-lead.php" id="newLead" class="form" method="POST"> -->
-                    <form id="newLead" class="form">
-                      <div class="form-field">
-                        <label class="form-field-label" for="firstName">First Name</label>
-                        <input type="text" name="firstName" id="firstName" id="firstName" />
-                        <small></small>
-                      </div>
-                      <div class="form-field">
-                        <label class="form-field-label" for="lastName">Last Name</label>
-                        <input type="text" name="lastName" id="lastName" id="lastName" />
-                        <small></small>
-                      </div>
-                      <div class="form-field">
-                        <label class="form-field-label" for="email">Email</label>
-                        <input type="text" name="email" id="email" />
-                        <small></small>
-                      </div>
-                      <div class="form-field">
-                        <label class="form-field-label" for="telephone">Telephone</label>
-                        <input type="text" name="telephone" id="telephone" />
-                        <small></small>
-                      </div>
-                      <div class="form-field dropdown">
-                        <label class="form-field-label" for="buyerType" class="buyerType">Application Type</label>
-                        <select class="secondary" name="buyerType" id="buyerType">
-                          <option value="Purchase">Purchase</option>
-                          <option value="FirstTimeBuyer">First Time Buyer</option>
-                          <option value="Remortgage">Remortgage</option>
-                          <option value="RaiseFunds">Raise Funds</option>
-                        </select>
-                      </div>
-                      <div class="form-field" id="terms">
-                        <label class="check-container" for="accept">
-                          <input class="accept" type="checkbox" id="accept" name="accept" value="yes" /> I agree to
-                          the <a href="#">terms and conditions, and to my details being stored by DAS-Finance for
-                            contact purposes</a>
-                        </label>
-                        <small></small>
-                      </div>
-                      <div class="form-field buttons">
-                        <button disabled class="submitButton" name="submitButton" type="submit" id="submitButton">
-                          Submit </button>
-                        <input class="clear" type="reset" name="reset" id="reset" />
-                      </div>
-                    </form>
-                  </div>
+                <div class="contact-embed iframe-wrapper">
+                  <iframe id="iframe-1" style="width: 100%; border: none; height: 1000px;" src="https://mortgage.meetparker.io/client?apiKey=1077ff2a-02e6-40d2-80d8-7964e93e992b"></iframe>
                 </div>
-                <script src="./smartr365-api/js/app-copy.js"></script>
               </div>
             </div>
           </div>
@@ -459,10 +403,10 @@
         <h3 class="widget-title-text">Take charge of your finances with our easy to use finance calculators</h3>
       </div>
       <div class="widget-wrapper">
-        <div class="stamp-calc">
+        <div id="stamp-duty-calculator" class="stamp-calc">
           <iframe style="width: 100%; border: none; height: 800px;" src="https://calculator.meetparker.co.uk/client?apiKey=48b83e30-e6eb-463d-bd08-4dc80c58127a"></iframe>
         </div>
-        <div class="mortgage-calc">
+        <div id="mortgage-calculator" class="mortgage-calc">
           <iframe style="width: 100%; border: none; height: 800px;" src="https://calculator.meetparker.co.uk/client?apiKey=4f02a807-c152-409c-9b3e-5d5760af7f28"></iframe>
         </div>
       </div>

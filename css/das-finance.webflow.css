@@ -2355,7 +2355,7 @@ h6 {
 	-webkit-box-align: center;
 	-webkit-align-items: center;
 	-ms-flex-align: center;
-	align-items: center;
+	align-items: flex-start;
 }
 
 .section-2 {
@@ -4363,6 +4363,11 @@ div.w-row {
 	background-color: rgba(105, 147, 145, 0.56);
 	background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(#699391));
 	background-image: linear-gradient(90deg, #699391, #fff);
+}
+
+.section_cta {
+	display: flex;
+	gap: 20px;
 }
 
 @media screen and (min-width: 1440px) {
@@ -6796,7 +6801,7 @@ div.w-row {
 
 .widget-wrapper {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	gap: 40px;
 	justify-content: center;
 }
@@ -6804,4 +6809,5 @@ div.w-row {
 .stamp-calc,
 .mortgage-calc {
 	width: 100%;
+	padding-top: 100px;
 }
