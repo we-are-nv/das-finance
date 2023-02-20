@@ -6735,28 +6735,6 @@ div.w-row {
 	/* font-size: inherit; */
 }
 
-
-
-
-/*
-@media screen and (max-width: 991px) {
-	.contact-top-wrapper {
-		background-position: center;
-	}
-
-	.contact-text {
-		color: #fff;
-		font-size: 1.5em;
-	}
-
-	.contact-text h3,
-	.contact-text .body-paragraphy.light,
-	.contact-text .tel-link {
-		font-size: inherit;
-	}
-
-} */
-
 .iframe-wrapper {
 	width: 100%;
 }
@@ -6767,6 +6745,12 @@ div.w-row {
 	flex-direction: row;
 	gap: 2em;
 	width: 100%;
+}
+
+@media only screen and (max-width: 991px) {
+	.contact-bottom-wrapper {
+		flex-direction: column;
+	}
 }
 
 .calendly-left-wrapper {
