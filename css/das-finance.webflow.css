@@ -6688,16 +6688,24 @@ div.w-row {
 	-webkit-align-items: center;
 	-ms-flex-align: center;
 	align-items: center;
+	padding: 80px 3em 2em 3em;
+	gap: 40px;
 }
+
+
 
 .contact-top-wrapper {
 	width: 100%;
-
-	padding: 2em 2em 2em 2em;
+	background-color: transparent;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.29)), to(rgba(0, 0, 0, 0.29))), url(../images/pexels-antoni-shkraba-5816286.jpg);
+	background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/pexels-antoni-shkraba-5816286.jpg);
+	background-size: contain;
+	background-position-x: -100px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	gap: 2em;
+	padding: 40px 0 0 20px;
 
 }
 
@@ -6705,6 +6713,21 @@ div.w-row {
 	width: 100%;
 
 }
-/* .iframe-wrapper > iframe {
-	overflow: visible;
-} */
+
+
+.contact-bottom-wrapper {
+	display: flex;
+	flex-direction: row;
+	gap: 2em;
+	width: 100%;
+
+
+}
+
+.calendly-left-wrapper {
+	width: 40%
+}
+
+.calendly-wrapper {
+	width: 100%;
+}
