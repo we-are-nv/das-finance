@@ -616,7 +616,8 @@ h6 {
 	display: -ms-flexbox;
 	display: flex;
 	height: 50%;
-	padding-left: 10em;
+	padding-left: 6em;
+	padding-right: 6em;
 	-webkit-box-align: center;
 	-webkit-align-items: center;
 	-ms-flex-align: center;
@@ -4370,6 +4371,19 @@ div.w-row {
 	gap: 20px;
 }
 
+@media screen and (min-width: 1401px) {
+	.section_cta {
+		padding-right: 260px;
+	}
+}
+
+
+@media screen and (max-width: 1400px) {
+	.section_cta {
+		padding-right: 320px;
+	}
+}
+
 @media screen and (min-width: 1440px) {
 	.section-3.home-hero-section {
 		min-height: 60vh;
@@ -4687,7 +4701,8 @@ div.w-row {
 
 
 	.hero-intro {
-		padding-left: 5em;
+		padding-left: 2em;
+		padding-right: 2em;
 	}
 
 	.style-guide {
@@ -6748,9 +6763,22 @@ div.w-row {
 }
 
 @media only screen and (max-width: 991px) {
+	.button {
+		padding: 12px;
+		font-size: 16px;
+	}
+
 	.contact-bottom-wrapper {
 		flex-direction: column;
 	}
+}
+
+@media only screen and (max-width: 1230px) {
+	.button {
+		padding: 12px;
+		font-size: 16px;
+	}
+
 }
 
 .calendly-left-wrapper {
