@@ -680,6 +680,12 @@ h6 {
 	text-transform: uppercase;
 }
 
+@media screen and (max-width:768px) {
+	.button {
+		margin-top: 6px;
+	}
+}
+
 .button:hover {
 	background-color: #2bded3;
 	color: #121e2b;
@@ -922,7 +928,7 @@ h6 {
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
-	padding: 4em;
+	padding: 2em;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	-webkit-flex-direction: column;
@@ -1205,7 +1211,7 @@ h6 {
 }
 
 .stat-title {
-	overflow: hidden;
+
 	height: 3em;
 	margin-bottom: 0em;
 }
@@ -4038,13 +4044,6 @@ div.w-row {
 	min-width: 100%;
 }
 
-.lottie-animation {
-	min-width: 100%;
-	-webkit-box-flex: 1;
-	-webkit-flex: 1;
-	-ms-flex: 1;
-	flex: 1;
-}
 
 .div-block-21 {
 	display: -webkit-box;
@@ -4384,10 +4383,40 @@ div.w-row {
 	}
 }
 
+@media screen and (max-width: 768px) {
+	.section_cta {
+		padding: 0;
+		gap: 6px;
+	}
+
+	.section-heading.index {
+		align-items: center;
+	}
+}
+
+@media screen and (max-width: 585px) {
+	.hero-intro {
+		height: auto;
+		padding: 20px 0;
+		background-color: #699391;
+	}
+
+	.hero-intro_wrapper {
+		padding-bottom: 60px;
+	}
+
+	.section-heading.index>h1 {
+		margin: 0;
+	}
+
+}
+
 @media screen and (min-width: 1440px) {
 	.section-3.home-hero-section {
 		min-height: 60vh;
 	}
+
+
 
 	.faq__item {
 		padding-top: 60px;
@@ -6762,14 +6791,37 @@ div.w-row {
 	width: 100%;
 }
 
+.calendly-left-wrapper {
+	width: 40%
+}
+
+.calendly-wrapper {
+	width: 100%;
+}
+
+
+
 @media only screen and (max-width: 991px) {
 	.button {
 		padding: 12px;
 		font-size: 16px;
 	}
 
+	.calendly-left-wrapper {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.calendly-left-wrapper .lottie-animation {
+		max-width: 200px;
+		align-items: center;
+	}
+
 	.contact-bottom-wrapper {
 		flex-direction: column;
+		align-items: center;
 	}
 }
 
@@ -6781,13 +6833,6 @@ div.w-row {
 
 }
 
-.calendly-left-wrapper {
-	width: 40%
-}
-
-.calendly-wrapper {
-	width: 100%;
-}
 
 .widget-section {
 	display: flex;
