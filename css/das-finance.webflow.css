@@ -6727,3 +6727,37 @@ div.w-row {
 .calendly-wrapper {
 	width: 100%;
 }
+
+.widget-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 40px 40px 0 40px;
+	height: 100%;
+	background-color: #699191;
+
+}
+
+.widget-title {
+	padding: 40px 0;
+}
+
+
+.widget-section>h3.widget-title-text {
+	color: #121e2b !important;
+	padding: 40px 0 40px 0;
+	font-size: 42px;
+	font-weight: 700;
+}
+
+.widget-wrapper {
+	display: flex;
+	flex-direction: row;
+	gap: 40px;
+	justify-content: center;
+}
+
+.stamp-calc,
+.mortgage-calc {
+	width: 100%;
+}
