@@ -379,7 +379,7 @@ h6 {
 }
 
 .navbar {
-	max-width: 90vw;
+	/* max-width: 90vw; */
 	z-index: 99999999999;
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -4663,6 +4663,7 @@ div.w-row {
 	}
 
 	.nav-links {
+		/* display: flex; */
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -4674,9 +4675,14 @@ div.w-row {
 			linear-gradient(0deg, rgba(43, 222, 211, 0.5), transparent);
 		background: linear-gradient(180deg, #699391 39%, transparent),
 			linear-gradient(0deg, rgba(43, 222, 211, 0.5), transparent);
-		
 
 
+
+	}
+
+	#queencolumns .tel-link {
+		padding-top: 80px;
+		margin: auto;
 	}
 
 	.nav-logo {
