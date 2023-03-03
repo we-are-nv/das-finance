@@ -4670,18 +4670,20 @@ div.w-row {
 		width: 100% !important;
 		height: 200px;
 		border-radius: 0 0 82px 82px;
-		padding: 0 20px 10px 20px;
-		background: linear-gradient(180deg, #699391 39%, transparent),
-			linear-gradient(0deg, rgba(43, 222, 211, 0.5), transparent);
-		background: linear-gradient(180deg, #699391 39%, transparent),
-			linear-gradient(0deg, rgba(43, 222, 211, 0.5), transparent);
+		padding: 40px 20px 10px 20px;
+		background: linear-gradient(180deg, #699391 100%, transparent),
+			linear-gradient(0deg, rgba(43, 222, 211, 1), transparent);
+		background: linear-gradient(180deg, #699391 100%, transparent),
+			linear-gradient(0deg, rgba(43, 222, 211, 1), transparent);
 
 
 
 	}
 
 	#queencolumns .tel-link {
-		padding-top: 80px;
+		padding-top: 60px;
+		padding-bottom: 20px;
+		text-align: center;
 		margin: auto;
 	}
 
@@ -5244,9 +5246,9 @@ div.w-row {
 		padding-right: 2em;
 	}
 
-	.nav-links {
+	/* .nav-links {
 		display: none;
-	}
+	} */
 
 	.logo {
 		width: 3.5em;
@@ -5696,7 +5698,7 @@ div.w-row {
 
 	.nav-links {
 		display: none;
-		padding-left: 2em;
+		/* padding-left: 2em; */
 		-webkit-box-orient: vertical;
 		-webkit-box-direction: normal;
 		-webkit-flex-direction: column;
@@ -6799,6 +6801,10 @@ div.w-row {
 		flex-direction: column;
 		align-items: center;
 	}
+
+	#contact {
+		padding-top: 230px;
+	}
 }
 
 @media only screen and (max-width: 1230px) {
@@ -6870,6 +6876,11 @@ div.w-row {
 
 @media screen and (max-width: 767px) {
 
+	.nav-button {
+		padding: 8px 16px;
+		margin-left: 8px;
+	}
+
 	.hero-intro {
 		padding: 0;
 	}
@@ -6898,6 +6909,34 @@ div.w-row {
 }
 
 @media screen and (max-width: 585px) {
+
+	.nav-links {
+		display: flex;
+		height: auto;
+		/* padding-left: 2em; */
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-webkit-box-pack: start;
+		-webkit-justify-content: flex-start;
+		-ms-flex-pack: start;
+		justify-content: flex-start;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+		padding-top: 60px;
+
+		background: linear-gradient(180deg, #699391 100%, transparent),
+			linear-gradient(0deg, rgba(43, 222, 211, 1), transparent) !important;
+		background: linear-gradient(180deg, #699391 100%, transparent),
+			linear-gradient(0deg, rgba(43, 222, 211, 1), transparent) !important;
+	}
+
+
+
 	.hero-intro {
 		height: auto;
 		padding: 0;
@@ -6928,8 +6967,10 @@ div.w-row {
 		justify-content: space-evenly;
 	}
 
-}
+	.nav-button {
+		margin-left: 0;
+		margin-top: 1em;
+	}
 
-@media screen and (min-width: 479px) {
-	.hero-intro_wrapper {}
+
 }
