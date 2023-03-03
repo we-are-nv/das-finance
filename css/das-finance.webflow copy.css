@@ -3512,7 +3512,7 @@ h6 {
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
-	height: 84vh;
+	height: 70vh;
 	max-height: 780px;
 	padding-top: 100px;
 	padding-bottom: 100px;
@@ -3547,8 +3547,7 @@ h6 {
 
 .button-5 {
 	background-color: #454f53;
-	font-size: 26px;
-	padding: 20px 28px;
+	font-size: 16px;
 }
 
 .bold-text {
@@ -4577,8 +4576,7 @@ div.w-row {
 
 @media screen and (max-width: 991px) {
 	body {
-		font-size: 1.2em;
-		line-height: 1.2em;
+		font-size: 16px;
 	}
 
 	h1 {
@@ -4635,6 +4633,35 @@ div.w-row {
 		padding-right: 2em;
 	}
 
+	.nav-links {
+		/* position: fixed;
+		left: 0px;
+		top: 0px; */
+		/* right: 0%; */
+		/* bottom: auto;
+		z-index: 1;
+		display: none;
+		width: 100%;
+		padding: 6.5em 2em;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		-webkit-box-align: start;
+		-webkit-align-items: flex-start;
+		-ms-flex-align: start;
+		align-items: flex-start;
+		border-bottom-left-radius: 5em;
+		border-bottom-right-radius: 5em;
+		background-color: #121e2b;
+		background-image: -webkit-gradient(linear, left top, left bottom, color-stop(39%, #699391), to(transparent)),
+			-webkit-gradient(linear, left bottom, left top, from(rgba(43, 222, 211, 0.5)), to(transparent));
+		background-image: linear-gradient(180deg, #699391 39%, transparent), linear-gradient(0deg, rgba(43, 222, 211, 0.5), transparent);
+		-webkit-transform: translate(0px, 0%);
+		-ms-transform: translate(0px, 0%);
+		transform: translate(0px, 0%); */
+	}
 
 	.nav-links {
 		/* display: flex; */
@@ -4646,9 +4673,9 @@ div.w-row {
 		border-radius: 0 0 82px 82px;
 		padding: 40px 20px 10px 20px;
 		background: linear-gradient(180deg, #699391 100%, transparent),
-			linear-gradient(0deg, rgba(43, 222, 211, 1), transparent) !important;
+			linear-gradient(0deg, rgba(43, 222, 211, 1), transparent);
 		background: linear-gradient(180deg, #699391 100%, transparent),
-			linear-gradient(0deg, rgba(43, 222, 211, 1), transparent) !important;
+			linear-gradient(0deg, rgba(43, 222, 211, 1), transparent);
 
 
 
@@ -6847,42 +6874,7 @@ div.w-row {
 	}
 }
 
-@media screen and (max-width: 991px) {
-
-
-
-	#hero-overlay {
-		padding-top: 160px;
-	}
-}
-
 @media screen and (max-width: 767px) {
-
-	.nav-links {
-		display: flex;
-		height: auto;
-		/* padding-left: 2em; */
-		-webkit-box-orient: vertical;
-		-webkit-box-direction: normal;
-		-webkit-flex-direction: column;
-		-ms-flex-direction: column;
-		flex-direction: column;
-		-webkit-box-pack: start;
-		-webkit-justify-content: flex-start;
-		-ms-flex-pack: start;
-		justify-content: flex-start;
-		-webkit-box-align: center;
-		-webkit-align-items: center;
-		-ms-flex-align: center;
-		align-items: center;
-		padding-top: 60px;
-		padding-bottom: 30px;
-		gap: 16px;
-		background: linear-gradient(180deg, #699391 100%, transparent),
-			linear-gradient(0deg, rgba(43, 222, 211, 1), transparent) !important;
-		background: linear-gradient(180deg, #699391 100%, transparent),
-			linear-gradient(0deg, rgba(43, 222, 211, 1), transparent) !important;
-	}
 
 	.nav-button {
 		padding: 8px 16px;
